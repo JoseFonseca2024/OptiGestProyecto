@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\AppGestionCajaInventario.csproj": {}
+    "C:\\Users\\fares\\Source\\Repos\\OptiGestProyecto\\AppGestionCajaInventario\\AppGestionCajaInventario.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\AppGestionCajaInventario.csproj": {
+    "C:\\Users\\fares\\Source\\Repos\\OptiGestProyecto\\AppGestionCajaInventario\\AppGestionCajaInventario.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\AppGestionCajaInventario.csproj",
+        "projectUniqueName": "C:\\Users\\fares\\Source\\Repos\\OptiGestProyecto\\AppGestionCajaInventario\\AppGestionCajaInventario.csproj",
         "projectName": "AppGestionCajaInventario",
-        "projectPath": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\AppGestionCajaInventario.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\obj\\",
+        "projectPath": "C:\\Users\\fares\\Source\\Repos\\OptiGestProyecto\\AppGestionCajaInventario\\AppGestionCajaInventario.csproj",
+        "packagesPath": "C:\\Users\\fares\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fares\\Source\\Repos\\OptiGestProyecto\\AppGestionCajaInventario\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fares\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,9 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -78,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
