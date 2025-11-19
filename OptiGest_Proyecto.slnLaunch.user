@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "APIGestionCajaInventario\\APIGestionCajaInventario.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AppGestionCajaInventario\\AppGestionCajaInventario.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

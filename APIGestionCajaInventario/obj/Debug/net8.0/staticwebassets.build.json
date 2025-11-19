@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "kytXFYTlFx5SDG6BvrnQx0OCQvcAwPMYgfgJRYTZick=",
+  "Source": "APIGestionCajaInventario",
+  "BasePath": "_content/APIGestionCajaInventario",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

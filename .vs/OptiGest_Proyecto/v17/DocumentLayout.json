@@ -1,0 +1,770 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formsusuario\\formregistrodeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formsusuario\\formregistrodeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formsusuario\\formregistrarnuevousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formsusuario\\formregistrarnuevousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\class\\formservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\class\\formservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\models\\dto\\usuarios\\usuarioupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\models\\dto\\usuarios\\usuarioupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formsusuario\\formregistrodeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formsusuario\\formregistrodeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\models\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\models\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\models\\repository\\interfaces\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\models\\repository\\interfaces\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\dao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\dao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\dto\\usuarios\\usuarioupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\dto\\usuarios\\usuarioupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\services\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\services\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formsusuario\\formconfirmarregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formsusuario\\formconfirmarregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formsusuario\\formconfirmarregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formsusuario\\formconfirmarregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formsusuario\\formregistrarnuevousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formsusuario\\formregistrarnuevousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formsusuario\\formregistrarnuevousuario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formsusuario\\formregistrarnuevousuario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formslogins\\formcrearusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formslogins\\formcrearusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formsempresa\\empresaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formsempresa\\empresaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\models\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\models\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\models\\repository\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\models\\repository\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\models\\dto\\usuarios\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\models\\dto\\usuarios\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\dto\\usuarios\\usuariocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\dto\\usuarios\\usuariocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\data\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\data\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\data\\procedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\data\\procedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\services\\interfaces\\iempresaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\services\\interfaces\\iempresaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\services\\interfaces\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\services\\interfaces\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\services\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\services\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\mappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\mappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\services\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\services\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\dto\\usuarios\\roldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\dto\\usuarios\\roldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\apigestioncajainventario\\models\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14C1ECA9-992C-46C3-9A23-7F9C97AC6FB8}|APIGestionCajaInventario\\APIGestionCajaInventario.csproj|solutionrelative:apigestioncajainventario\\models\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formsempresa\\empresaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formsempresa\\empresaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formslogins\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formslogins\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\formslogins\\formcrearusuario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\formslogins\\formcrearusuario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|c:\\users\\usuario\\documents\\uni\\2025\\iisemestre\\basededatosi\\optigest_proyecto\\appgestioncajainventario\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CA8456-8C9E-4E3E-9C7F-262B3A7ABD2E}|AppGestionCajaInventario\\AppGestionCajaInventario.csproj|solutionrelative:appgestioncajainventario\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormRegistrodeUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrodeUsuarios.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrodeUsuarios.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrodeUsuarios.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrodeUsuarios.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAgwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:10:30.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Dto\\Usuarios\\UsuarioUpdateDto.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Models\\Dto\\Usuarios\\UsuarioUpdateDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Dto\\Usuarios\\UsuarioUpdateDto.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Models\\Dto\\Usuarios\\UsuarioUpdateDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:22:32.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormRegistrarNuevoUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAACEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T04:50:08.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Class\\FormService.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Class\\FormService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Class\\FormService.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Class\\FormService.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAswGwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T06:30:19.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormRegistrodeUsuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrodeUsuarios.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrodeUsuarios.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrodeUsuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrodeUsuarios.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:21:03.327Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Repository\\AdminRepository.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Models\\Repository\\AdminRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Repository\\AdminRepository.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Models\\Repository\\AdminRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:24:39.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Repository\\Interfaces\\IAdminRepository.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Models\\Repository\\Interfaces\\IAdminRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Repository\\Interfaces\\IAdminRepository.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Models\\Repository\\Interfaces\\IAdminRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwA4AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:23:59.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsuarioDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\DAO\\UsuarioDAO.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\DAO\\UsuarioDAO.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\DAO\\UsuarioDAO.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\DAO\\UsuarioDAO.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAgwKEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:50:15.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Services\\UsuarioService.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAwE0AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:09:43.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IUsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\Interfaces\\IUsuarioService.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Services\\Interfaces\\IUsuarioService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\Interfaces\\IUsuarioService.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Services\\Interfaces\\IUsuarioService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:40:36.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsuarioUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Dto\\Usuarios\\UsuarioUpdateDto.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Dto\\Usuarios\\UsuarioUpdateDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Dto\\Usuarios\\UsuarioUpdateDto.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Dto\\Usuarios\\UsuarioUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:42:54.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAcwGEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T07:04:53.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormConfirmarRegistro.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormConfirmarRegistro.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormConfirmarRegistro.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormConfirmarRegistro.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormConfirmarRegistro.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAswGcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T06:33:31.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormConfirmarRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormConfirmarRegistro.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormConfirmarRegistro.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormConfirmarRegistro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormConfirmarRegistro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T06:31:28.117Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormRegistrarNuevoUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T06:57:17.186Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormRegistrarNuevoUsuario.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.Designer.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.Designer.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.Designer.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsUsuario\\FormRegistrarNuevoUsuario.Designer.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAApwN4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T06:58:50.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormCrearUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsLogins\\FormCrearUsuario.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsLogins\\FormCrearUsuario.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsLogins\\FormCrearUsuario.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsLogins\\FormCrearUsuario.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAcwFIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:06:44.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\MainForm.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\MainForm.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwDIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:50:20.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EmpresaForm.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsEmpresa\\EmpresaForm.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsEmpresa\\EmpresaForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsEmpresa\\EmpresaForm.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsEmpresa\\EmpresaForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:34:46.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Models\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Models\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T06:10:26.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Repository\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Models\\Repository\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Repository\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Models\\Repository\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T06:09:14.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MainForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\MainForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\MainForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:56:00.449Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UsuarioDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Dto\\Usuarios\\UsuarioDto.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Models\\Dto\\Usuarios\\UsuarioDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Models\\Dto\\Usuarios\\UsuarioDto.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Models\\Dto\\Usuarios\\UsuarioDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T04:12:16.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UsuarioCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Dto\\Usuarios\\UsuarioCreateDto.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Dto\\Usuarios\\UsuarioCreateDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Dto\\Usuarios\\UsuarioCreateDto.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Dto\\Usuarios\\UsuarioCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:43:04.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "EmpresaController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Controllers\\EmpresaController.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Controllers\\EmpresaController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Controllers\\EmpresaController.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Controllers\\EmpresaController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowCAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:47:59.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\JwtService.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T05:24:41.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Program.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Program.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Program.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:50:16.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Models\\Usuario.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T02:20:37.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ConexionDB.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Data\\ConexionDB.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Data\\ConexionDB.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Data\\ConexionDB.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Data\\ConexionDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:42:13.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\appsettings.json",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\appsettings.json",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\appsettings.json",
+              "RelativeToolTip": "APIGestionCajaInventario\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-19T03:42:18.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Procedimientos.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Data\\Procedimientos.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Data\\Procedimientos.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Data\\Procedimientos.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Data\\Procedimientos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T02:45:44.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IEmpresaService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\Interfaces\\IEmpresaService.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Services\\Interfaces\\IEmpresaService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\Interfaces\\IEmpresaService.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Services\\Interfaces\\IEmpresaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:14:23.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\Interfaces\\IEmailService.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Services\\Interfaces\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\Interfaces\\IEmailService.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Services\\Interfaces\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:14:20.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "MappingConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\MappingConfig.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\MappingConfig.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\MappingConfig.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\MappingConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:57:34.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\Interfaces\\IService.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Services\\Interfaces\\IService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\Interfaces\\IService.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Services\\Interfaces\\IService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T20:58:18.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ServiceBase.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\ServiceBase.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Services\\ServiceBase.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Services\\ServiceBase.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Services\\ServiceBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T02:29:35.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "RolDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Dto\\Usuarios\\RolDto.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Dto\\Usuarios\\RolDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Dto\\Usuarios\\RolDto.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Dto\\Usuarios\\RolDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T02:22:24.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Models\\Rol.cs",
+              "RelativeDocumentMoniker": "APIGestionCajaInventario\\Models\\Rol.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\APIGestionCajaInventario\\Models\\Rol.cs",
+              "RelativeToolTip": "APIGestionCajaInventario\\Models\\Rol.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T02:22:00.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\App.config",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\App.config",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\App.config",
+              "RelativeToolTip": "AppGestionCajaInventario\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-19T01:14:54.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "EmpresaForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsEmpresa\\EmpresaForm.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsEmpresa\\EmpresaForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsEmpresa\\EmpresaForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsEmpresa\\EmpresaForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:16:05.331Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsLogins\\LoginForm.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsLogins\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsLogins\\LoginForm.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsLogins\\LoginForm.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAuwCwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:10:55.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "FormCrearUsuario.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsLogins\\FormCrearUsuario.Designer.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormsLogins\\FormCrearUsuario.Designer.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsLogins\\FormCrearUsuario.Designer.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsLogins\\FormCrearUsuario.Designer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAqwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T00:01:37.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\MainForm.Designer.cs",
+              "RelativeToolTip": "AppGestionCajaInventario\\Forms\\MainForm.Designer.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAowHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T23:56:48.832Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
