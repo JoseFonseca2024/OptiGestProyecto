@@ -5,11 +5,6 @@ using APIGestionCajaInventario.Services.Interfaces;
 
 namespace APIGestionCajaInventario.Services
 {
-    // UsuarioService.cs
-    using System;
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
-
     public class UsuarioService : IUsuarioService
     {
         private readonly UsuarioDAO _usuarioDAO;

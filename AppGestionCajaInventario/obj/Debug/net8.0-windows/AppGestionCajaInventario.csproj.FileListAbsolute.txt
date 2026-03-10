@@ -57,3 +57,9 @@ C:\Users\fares\Source\Repos\OptiGestProyecto\AppGestionCajaInventario\obj\Debug\
 C:\Users\fares\Source\Repos\OptiGestProyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.pdb
 C:\Users\fares\Source\Repos\OptiGestProyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.genruntimeconfig.cache
 C:\Users\fares\Source\Repos\OptiGestProyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\ref\AppGestionCajaInventario.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormProductos.FormProductos.resources
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.sourcelink.json
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormsEntidadesExternas.FormClientes.resources
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormsEntidadesExternas.FormProveedores.resources
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormTurnos.FormIniciarTurno.resources
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormTurnos.FormVerRegistroTurnos.resources

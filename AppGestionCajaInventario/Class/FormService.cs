@@ -1,6 +1,9 @@
 ﻿using AppGestionCajaInventario.Controllers;
 using AppGestionCajaInventario.Forms.FormsLogins;
+using AppGestionCajaInventario.Models.Dto.Clientes;
 using AppGestionCajaInventario.Models.Dto.Empresas;
+using AppGestionCajaInventario.Models.Dto.Productos;
+using AppGestionCajaInventario.Models.Dto.Proveedores;
 using AppGestionCajaInventario.Models.Dto.Usuarios;
 using AppGestionCajaInventario.Models.Repository;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
@@ -108,22 +111,14 @@ namespace AppGestionCajaInventario.Class
             }
         }
 
-        public void LimpiarCampos(Control contenedordetextbox)
+        public void LimpiarCampos(Control contenedor)
         {
-            foreach (Control control in contenedordetextbox.Controls)
+            foreach (Control control in contenedor.Controls)
             {
-                if (control is TextBox txt)
-                {
-                    txt.Clear();
-                }
-                else if (control is MaskedTextBox msk)
-                {
-                    msk.Clear();
-                }
-                else if (control.HasChildren)
-                {
-                    LimpiarCampos(control); // Recorre contenedores anidados
-                }
+                if (control is TextBox txt) txt.Clear();
+                else if (control is MaskedTextBox msk) msk.Clear();
+                else if (control is ComboBox cmb) cmb.SelectedIndex = -1;
+                else if (control.HasChildren) LimpiarCampos(control);
             }
         }
 
@@ -410,6 +405,68 @@ namespace AppGestionCajaInventario.Class
                 MessageBox.Show($"Error al actualizar usuario:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
 
+        public async Task CargarProductos(IProductoRepository _productoRepository, DataGridView dgvProductos)
+        {
+            var productos = await _productoRepository.ObtenerProductosPorEmpresaAsync();
+            dgvProductos.DataSource = productos;
+        }
+
+        public async Task<bool> AgregarProductoAsync(IProductoRepository productoRepository, ProductosCreateDto productosDto)
+        {
+            return await productoRepository.CrearAsync(productosDto);
+        }
+
+        public async Task<bool> ActualizarProductoAsync(IProductoRepository productoRepository, int id, ProductosUpdateDto dto)
+        {
+            return await productoRepository.ActualizarAsync(id, dto);
+        }
+
+        public async Task<bool> EliminarProductoAsync(IProductoRepository productoRepository, int id)
+        {
+            return await productoRepository.EliminarAsync(id);
+        }
+
+        public async Task CargarClientesAsync(IClienteRepository clienteRepository, DataGridView dgvClientes)
+        {
+            var clientes = await clienteRepository.ObtenerClientesPorEmpresaAsync();
+            dgvClientes.DataSource = clientes;
+        }
+
+        public async Task<bool> RegistrarClienteAsync(IClienteRepository clienteRepository, ClienteCreateDto dto)
+        {
+            return await clienteRepository.CrearAsync(dto);
+        }
+
+        public async Task<bool> ActualizarClienteAsync(IClienteRepository clienteRepository, int id, ClienteUpdateDto dto)
+        {
+            return await clienteRepository.ActualizarAsync(id, dto);
+        }
+
+        public async Task<bool> EliminarClienteAsync(IClienteRepository clienteRepository, int id)
+        {
+            return await clienteRepository.EliminarAsync(id);
+        }
+
+        public async Task CargarProveedoresAsync(IProveedorRepository proveedorRepository, DataGridView dgvProveedores)
+        {
+            var proveedores = await proveedorRepository.GetAllPorEmpresaAsync();
+            dgvProveedores.DataSource = proveedores;
+        }
+
+        public async Task<bool> RegistrarProveedorAsync(IProveedorRepository proveedorRepository, ProveedorCreateDto dto)
+        {
+            return await proveedorRepository.CrearAsync(dto);
+        }
+
+        public async Task<bool> ActualizarProveedorAsync(IProveedorRepository proveedorRepository, int id, ProveedorUpdateDto dto)
+        {
+            return await proveedorRepository.ActualizarAsync(id, dto);
+        }
+
+        public async Task<bool> EliminarProveedorAsync(IProveedorRepository proveedorRepository, int id)
+        {
+            return await proveedorRepository.EliminarAsync(id);
+        }
+    }
 }

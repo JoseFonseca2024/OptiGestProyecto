@@ -2,9 +2,9 @@
 {
     public class ProductosCreateDto
     {
-        public string NombreProducto { get; set; }
+        public string NombreProducto { get; set; } = string.Empty;
 
-        public string CodigoProducto { get; set; }
+        public string CodigoProducto { get; set; } = string.Empty;
 
         public decimal CostoPromedio { get; set; }
 

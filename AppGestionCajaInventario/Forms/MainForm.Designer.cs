@@ -68,6 +68,12 @@
             verMovimientosToolStripMenuItem2 = new ToolStripMenuItem();
             movimientosDeCajaToolStripMenuItem = new ToolStripMenuItem();
             movimientosDeInventarioToolStripMenuItem = new ToolStripMenuItem();
+            iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
+            toolStripMenuItem12 = new ToolStripMenuItem();
+            generarReporteDeComprasToolStripMenuItem = new ToolStripMenuItem();
+            generarReporteDeProductosToolStripMenuItem = new ToolStripMenuItem();
+            sobreMovimientosToolStripMenuItem = new ToolStripMenuItem();
+            sobreSticokToolStripMenuItem = new ToolStripMenuItem();
             imiCerrarSesion = new FontAwesome.Sharp.IconMenuItem();
             mstTitulo = new MenuStrip();
             tslTitulo = new ToolStripLabel();
@@ -100,7 +106,7 @@
             // 
             // mstPrincipal
             // 
-            mstPrincipal.Items.AddRange(new ToolStripItem[] { imiUsuarios, imiEmpresas, imiTurnos, imiFacturar, imiComprar, imiCotizar, imiCajas, imiInventario, imiClientes, imiProveedores, imiAjustes, imiOperaciones });
+            mstPrincipal.Items.AddRange(new ToolStripItem[] { imiUsuarios, imiEmpresas, imiTurnos, imiFacturar, imiComprar, imiCotizar, imiCajas, imiInventario, imiClientes, imiProveedores, imiAjustes, imiOperaciones, iconMenuItem1 });
             mstPrincipal.Location = new Point(0, 73);
             mstPrincipal.Name = "mstPrincipal";
             mstPrincipal.Padding = new Padding(7, 2, 0, 2);
@@ -164,19 +170,21 @@
             // iniciarNuevoTurnoToolStripMenuItem
             // 
             iniciarNuevoTurnoToolStripMenuItem.Name = "iniciarNuevoTurnoToolStripMenuItem";
-            iniciarNuevoTurnoToolStripMenuItem.Size = new Size(173, 22);
+            iniciarNuevoTurnoToolStripMenuItem.Size = new Size(180, 22);
             iniciarNuevoTurnoToolStripMenuItem.Text = "Iniciar nuevoTurno";
+            iniciarNuevoTurnoToolStripMenuItem.Click += iniciarNuevoTurnoToolStripMenuItem_Click;
             // 
             // historialDeTurnosToolStripMenuItem
             // 
             historialDeTurnosToolStripMenuItem.Name = "historialDeTurnosToolStripMenuItem";
-            historialDeTurnosToolStripMenuItem.Size = new Size(173, 22);
+            historialDeTurnosToolStripMenuItem.Size = new Size(180, 22);
             historialDeTurnosToolStripMenuItem.Text = "Historial de Turnos";
+            historialDeTurnosToolStripMenuItem.Click += historialDeTurnosToolStripMenuItem_Click;
             // 
             // cerrarTurnoToolStripMenuItem
             // 
             cerrarTurnoToolStripMenuItem.Name = "cerrarTurnoToolStripMenuItem";
-            cerrarTurnoToolStripMenuItem.Size = new Size(173, 22);
+            cerrarTurnoToolStripMenuItem.Size = new Size(180, 22);
             cerrarTurnoToolStripMenuItem.Text = "Cerrar Turno";
             // 
             // imiFacturar
@@ -265,6 +273,7 @@
             stockToolStripMenuItem.Name = "stockToolStripMenuItem";
             stockToolStripMenuItem.Size = new Size(144, 22);
             stockToolStripMenuItem.Text = "Stock";
+            stockToolStripMenuItem.Click += stockToolStripMenuItem_Click;
             // 
             // promocionesToolStripMenuItem
             // 
@@ -283,6 +292,7 @@
             imiClientes.Size = new Size(62, 69);
             imiClientes.Text = "Clientes";
             imiClientes.TextImageRelation = TextImageRelation.ImageAboveText;
+            imiClientes.Click += imiClientes_Click;
             // 
             // imiProveedores
             // 
@@ -295,6 +305,7 @@
             imiProveedores.Size = new Size(84, 69);
             imiProveedores.Text = "Proveedores";
             imiProveedores.TextImageRelation = TextImageRelation.ImageAboveText;
+            imiProveedores.Click += imiProveedores_Click;
             // 
             // imiAjustes
             // 
@@ -416,6 +427,50 @@
             movimientosDeInventarioToolStripMenuItem.Name = "movimientosDeInventarioToolStripMenuItem";
             movimientosDeInventarioToolStripMenuItem.Size = new Size(216, 22);
             movimientosDeInventarioToolStripMenuItem.Text = "Movimientos de inventario";
+            // 
+            // iconMenuItem1
+            // 
+            iconMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem12, generarReporteDeComprasToolStripMenuItem, generarReporteDeProductosToolStripMenuItem });
+            iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
+            iconMenuItem1.IconColor = Color.Black;
+            iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenuItem1.IconSize = 50;
+            iconMenuItem1.ImageScaling = ToolStripItemImageScaling.None;
+            iconMenuItem1.Name = "iconMenuItem1";
+            iconMenuItem1.Size = new Size(65, 69);
+            iconMenuItem1.Text = "Reportes";
+            iconMenuItem1.TextImageRelation = TextImageRelation.ImageAboveText;
+            // 
+            // toolStripMenuItem12
+            // 
+            toolStripMenuItem12.Name = "toolStripMenuItem12";
+            toolStripMenuItem12.Size = new Size(229, 22);
+            toolStripMenuItem12.Text = "Generar Reporte de Ventas";
+            // 
+            // generarReporteDeComprasToolStripMenuItem
+            // 
+            generarReporteDeComprasToolStripMenuItem.Name = "generarReporteDeComprasToolStripMenuItem";
+            generarReporteDeComprasToolStripMenuItem.Size = new Size(229, 22);
+            generarReporteDeComprasToolStripMenuItem.Text = "Generar Reporte de Compras";
+            // 
+            // generarReporteDeProductosToolStripMenuItem
+            // 
+            generarReporteDeProductosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { sobreMovimientosToolStripMenuItem, sobreSticokToolStripMenuItem });
+            generarReporteDeProductosToolStripMenuItem.Name = "generarReporteDeProductosToolStripMenuItem";
+            generarReporteDeProductosToolStripMenuItem.Size = new Size(229, 22);
+            generarReporteDeProductosToolStripMenuItem.Text = "Generar reporte de Productos";
+            // 
+            // sobreMovimientosToolStripMenuItem
+            // 
+            sobreMovimientosToolStripMenuItem.Name = "sobreMovimientosToolStripMenuItem";
+            sobreMovimientosToolStripMenuItem.Size = new Size(177, 22);
+            sobreMovimientosToolStripMenuItem.Text = "Sobre Movimientos";
+            // 
+            // sobreSticokToolStripMenuItem
+            // 
+            sobreSticokToolStripMenuItem.Name = "sobreSticokToolStripMenuItem";
+            sobreSticokToolStripMenuItem.Size = new Size(177, 22);
+            sobreSticokToolStripMenuItem.Text = "Sobre sticok";
             // 
             // imiCerrarSesion
             // 
@@ -619,5 +674,11 @@
         private ToolStripMenuItem toolStripMenuItem11;
         private ToolStripMenuItem registrarNuevoUsuarioToolStripMenuItem;
         private ToolStripMenuItem registroDeUsuariosToolStripMenuItem;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
+        private ToolStripMenuItem toolStripMenuItem12;
+        private ToolStripMenuItem generarReporteDeComprasToolStripMenuItem;
+        private ToolStripMenuItem generarReporteDeProductosToolStripMenuItem;
+        private ToolStripMenuItem sobreMovimientosToolStripMenuItem;
+        private ToolStripMenuItem sobreSticokToolStripMenuItem;
     }
 }

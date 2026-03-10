@@ -15,7 +15,9 @@ namespace AppGestionCajaInventario.Controllers
         public HttpClient HttpClientInstance { get; }  // Expuesta para reuso
         public IUserRepository LoginUsers { get; }
         public IAdminRepository Admin { get; }
-
+        public IProductoRepository Producto { get; }
+        public IClienteRepository Cliente { get; }
+        public IProveedorRepository Proveedor { get; }
         public ApiClient()
         {
             string apiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"]!;
@@ -26,6 +28,9 @@ namespace AppGestionCajaInventario.Controllers
 
             LoginUsers = new UserRepository(HttpClientInstance, "Auth/login");
             Admin = new AdminRepository(HttpClientInstance);
+            Producto = new ProductoRepository(HttpClientInstance);
+            Cliente = new ClienteRepository(HttpClientInstance);
+            Proveedor = new ProveedorRepository(HttpClientInstance);
         }
 
         internal void SetAuthToken(string? token)

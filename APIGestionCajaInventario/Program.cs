@@ -8,6 +8,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using APIGestionCajaInventario;
+using APIGestionCajaInventario.DAO.Interfaces;
+using APIGestionCajaInventario.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,6 +46,12 @@ builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IEmpresaService, EmpresaService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IRepository<Producto>, ProductoDAO>();
+builder.Services.AddScoped<IClienteRepository, ClienteDAO>();
+builder.Services.AddScoped<IProveedorRepository, ProveedorDAO>();
+builder.Services.AddScoped<ProveedorService>(); 
+builder.Services.AddScoped<ProductoService>();
+builder.Services.AddScoped<ClienteService>();
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 

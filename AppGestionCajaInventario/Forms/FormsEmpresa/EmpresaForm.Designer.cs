@@ -252,6 +252,7 @@ namespace AppGestionCajaInventario.Forms.FormsEmpresa
             dgvEmpresas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvEmpresas.Location = new Point(390, 60);
             dgvEmpresas.Name = "dgvEmpresas";
+            dgvEmpresas.ReadOnly = true;
             dgvEmpresas.Size = new Size(506, 402);
             dgvEmpresas.TabIndex = 3;
             dgvEmpresas.CellClick += dgvEmpresas_CellClick;

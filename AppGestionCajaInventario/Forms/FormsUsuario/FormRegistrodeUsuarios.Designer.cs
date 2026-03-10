@@ -31,8 +31,10 @@
             panel1 = new Panel();
             groupBox1 = new GroupBox();
             ibtnEditar = new FontAwesome.Sharp.IconButton();
+            cmbRoles = new ComboBox();
             cmbEstado = new ComboBox();
             txtEmail = new TextBox();
+            lblRol = new Label();
             txtNombreUsuario = new TextBox();
             lblEstado = new Label();
             lblEmail = new Label();
@@ -49,8 +51,6 @@
             txtBusqueda = new TextBox();
             label1 = new Label();
             ibtnCerrar = new FontAwesome.Sharp.IconButton();
-            lblRol = new Label();
-            cmbRoles = new ComboBox();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
@@ -111,6 +111,17 @@
             ibtnEditar.UseVisualStyleBackColor = false;
             ibtnEditar.Click += ibtnEditar_Click;
             // 
+            // cmbRoles
+            // 
+            cmbRoles.Cursor = Cursors.Hand;
+            cmbRoles.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRoles.FormattingEnabled = true;
+            cmbRoles.Location = new Point(15, 180);
+            cmbRoles.Margin = new Padding(4, 3, 4, 3);
+            cmbRoles.Name = "cmbRoles";
+            cmbRoles.Size = new Size(265, 23);
+            cmbRoles.TabIndex = 18;
+            // 
             // cmbEstado
             // 
             cmbEstado.Cursor = Cursors.Hand;
@@ -129,6 +140,18 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(265, 23);
             txtEmail.TabIndex = 19;
+            // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.BackColor = Color.WhiteSmoke;
+            lblRol.Font = new Font("Microsoft New Tai Lue", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRol.Location = new Point(15, 157);
+            lblRol.Margin = new Padding(4, 0, 4, 0);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(30, 17);
+            lblRol.TabIndex = 12;
+            lblRol.Text = "Rol:";
             // 
             // txtNombreUsuario
             // 
@@ -198,6 +221,7 @@
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUsuarios.Location = new Point(346, 195);
             dgvUsuarios.Name = "dgvUsuarios";
+            dgvUsuarios.ReadOnly = true;
             dgvUsuarios.Size = new Size(575, 250);
             dgvUsuarios.TabIndex = 2;
             dgvUsuarios.CellClick += dgvUsuarios_CellClick;
@@ -313,29 +337,6 @@
             ibtnCerrar.TabIndex = 25;
             ibtnCerrar.UseVisualStyleBackColor = true;
             ibtnCerrar.Click += ibtnCerrar_Click;
-            // 
-            // lblRol
-            // 
-            lblRol.AutoSize = true;
-            lblRol.BackColor = Color.WhiteSmoke;
-            lblRol.Font = new Font("Microsoft New Tai Lue", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblRol.Location = new Point(15, 157);
-            lblRol.Margin = new Padding(4, 0, 4, 0);
-            lblRol.Name = "lblRol";
-            lblRol.Size = new Size(30, 17);
-            lblRol.TabIndex = 12;
-            lblRol.Text = "Rol:";
-            // 
-            // cmbRoles
-            // 
-            cmbRoles.Cursor = Cursors.Hand;
-            cmbRoles.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbRoles.FormattingEnabled = true;
-            cmbRoles.Location = new Point(15, 180);
-            cmbRoles.Margin = new Padding(4, 3, 4, 3);
-            cmbRoles.Name = "cmbRoles";
-            cmbRoles.Size = new Size(265, 23);
-            cmbRoles.TabIndex = 18;
             // 
             // FormRegistrodeUsuarios
             // 

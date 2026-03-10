@@ -172,3 +172,4 @@ C:\Users\fares\Source\Repos\OptiGestProyecto\APIGestionCajaInventario\obj\Debug\
 C:\Users\fares\Source\Repos\OptiGestProyecto\APIGestionCajaInventario\obj\Debug\net8.0\APIGestionCajaInventario.pdb
 C:\Users\fares\Source\Repos\OptiGestProyecto\APIGestionCajaInventario\obj\Debug\net8.0\APIGestionCajaInventario.genruntimeconfig.cache
 C:\Users\fares\Source\Repos\OptiGestProyecto\APIGestionCajaInventario\obj\Debug\net8.0\ref\APIGestionCajaInventario.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\APIGestionCajaInventario\obj\Debug\net8.0\APIGestionCajaInventario.sourcelink.json
