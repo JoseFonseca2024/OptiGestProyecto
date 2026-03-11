@@ -64,3 +64,15 @@ C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\Ap
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormTurnos.FormIniciarTurno.resources
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormTurnos.FormVerRegistroTurnos.resources
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormsCaja.FormRegistroCajas.resources
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormFacturación.FormFacturación.resources
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormReportes.FormReportedeVentas.resources
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\ScottPlot.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\ScottPlot.WinForms.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\RBush.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\System.IO.Packaging.dll

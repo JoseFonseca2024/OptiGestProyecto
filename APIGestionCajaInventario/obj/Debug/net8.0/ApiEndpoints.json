@@ -730,6 +730,22 @@
     ]
   },
   {
+    "ContainingType": "APIGestionCajaInventario.Controllers.ReportesController",
+    "Method": "GetVentasPorAnio",
+    "RelativePath": "api/Reportes/Ventas/{anio}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anio",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "APIGestionCajaInventario.Controllers.TurnosController",
     "Method": "AbrirTurno",
     "RelativePath": "api/Turnos/abrir",

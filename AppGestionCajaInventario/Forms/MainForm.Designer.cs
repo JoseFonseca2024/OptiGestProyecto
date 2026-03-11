@@ -203,14 +203,14 @@
             // facturaToolStripMenuItem
             // 
             facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            facturaToolStripMenuItem.Size = new Size(180, 22);
+            facturaToolStripMenuItem.Size = new Size(152, 22);
             facturaToolStripMenuItem.Text = "Factura";
             facturaToolStripMenuItem.Click += facturaToolStripMenuItem_Click;
             // 
             // reciboDeCajaToolStripMenuItem
             // 
             reciboDeCajaToolStripMenuItem.Name = "reciboDeCajaToolStripMenuItem";
-            reciboDeCajaToolStripMenuItem.Size = new Size(180, 22);
+            reciboDeCajaToolStripMenuItem.Size = new Size(152, 22);
             reciboDeCajaToolStripMenuItem.Text = "Recibo de Caja";
             // 
             // imiComprar
@@ -448,6 +448,7 @@
             toolStripMenuItem12.Name = "toolStripMenuItem12";
             toolStripMenuItem12.Size = new Size(229, 22);
             toolStripMenuItem12.Text = "Generar Reporte de Ventas";
+            toolStripMenuItem12.Click += toolStripMenuItem12_Click;
             // 
             // generarReporteDeComprasToolStripMenuItem
             // 

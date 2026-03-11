@@ -2,12 +2,14 @@
 using AppGestionCajaInventario.Controllers;
 using AppGestionCajaInventario.Forms.FormFacturación;
 using AppGestionCajaInventario.Forms.FormProductos;
+using AppGestionCajaInventario.Forms.FormReportes;
 using AppGestionCajaInventario.Forms.FormsCaja;
 using AppGestionCajaInventario.Forms.FormsEmpresa;
 using AppGestionCajaInventario.Forms.FormsEntidadesExternas;
 using AppGestionCajaInventario.Forms.FormsUsuario;
 using AppGestionCajaInventario.Forms.FormTurnos;
 using AppGestionCajaInventario.Models.Repository;
+using AppGestionCajaInventario.Models.Repository.Interfaces;
 
 namespace AppGestionCajaInventario
 {
@@ -21,6 +23,7 @@ namespace AppGestionCajaInventario
         private readonly ProveedorRepository _proveedorRepository;
         private readonly CajasRepository _cajasRepository;
         private readonly TurnoRepository _turnoRepository;
+        private readonly ReporteRepository _reporteRepository;
 
         public MainForm(ApiClient apiClient, string rol, string token)
         {
@@ -35,6 +38,7 @@ namespace AppGestionCajaInventario
             _proveedorRepository = new ProveedorRepository(_apiClient.HttpClientInstance);
             _cajasRepository = new CajasRepository(_apiClient.HttpClientInstance);
             _turnoRepository = new TurnoRepository(_apiClient.HttpClientInstance);
+            _reporteRepository = new ReporteRepository(_apiClient.HttpClientInstance);
 
 
             timerFechayHora.Start();
@@ -107,6 +111,12 @@ namespace AppGestionCajaInventario
         private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new FormFacturación();
+            _formService.MostrarFormenPanel(form, panel1);
+        }
+
+        private void toolStripMenuItem12_Click(object sender, EventArgs e)
+        {
+            var form = new FormReportedeVentas(_reporteRepository);
             _formService.MostrarFormenPanel(form, panel1);
         }
     }

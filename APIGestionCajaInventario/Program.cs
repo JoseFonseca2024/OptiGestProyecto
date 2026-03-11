@@ -56,6 +56,8 @@ builder.Services.AddScoped<IRepository<Cajas>, CajaDAO>();
 builder.Services.AddScoped<CajaService>();
 builder.Services.AddScoped<TurnoDAO>();
 builder.Services.AddScoped<TurnoService>();
+builder.Services.AddScoped<ReporteDAO>();
+builder.Services.AddScoped<ReporteService>();
 
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));
