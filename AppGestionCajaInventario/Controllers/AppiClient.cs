@@ -2,6 +2,7 @@
 using AppGestionCajaInventario.Models.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
 using System.Linq;
 using System.Net.Http.Headers;
@@ -18,6 +19,7 @@ namespace AppGestionCajaInventario.Controllers
         public IProductoRepository Producto { get; }
         public IClienteRepository Cliente { get; }
         public IProveedorRepository Proveedor { get; }
+        public ICajaRepository Caja { get; }
         public ApiClient()
         {
             string apiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"]!;
@@ -31,6 +33,7 @@ namespace AppGestionCajaInventario.Controllers
             Producto = new ProductoRepository(HttpClientInstance);
             Cliente = new ClienteRepository(HttpClientInstance);
             Proveedor = new ProveedorRepository(HttpClientInstance);
+            Caja = new CajasRepository(HttpClientInstance);
         }
 
         internal void SetAuthToken(string? token)

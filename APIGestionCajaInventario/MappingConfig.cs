@@ -5,6 +5,7 @@ using APIGestionCajaInventario.Dto.Usuarios;
 using APIGestionCajaInventario.Dto.Productos;
 using APIGestionCajaInventario.Dto.Clientes;
 using APIGestionCajaInventario.Dto.Proveedores;
+using APIGestionCajaInventario.Dto.Cajas;
 
 namespace APIGestionCajaInventario
 {
@@ -26,6 +27,12 @@ namespace APIGestionCajaInventario
 
             CreateMap<Cliente, ClienteDto>().ReverseMap();
             CreateMap<Proveedor, ProveedorDto>().ReverseMap();
+
+            CreateMap<Cajas, CajaDto>()
+                .ForMember(dest => dest.EmpresaNombre, opt => opt.MapFrom(src => src.EmpresaNombre))
+                .ReverseMap();
+            CreateMap<CajaCreateDto, Cajas>();
+            CreateMap<CajaUpdateDto, Cajas>();
 
             CreateMap<Rol, RolDto>().ReverseMap();
         }

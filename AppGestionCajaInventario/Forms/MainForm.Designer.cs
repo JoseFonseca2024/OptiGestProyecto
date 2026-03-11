@@ -170,21 +170,21 @@
             // iniciarNuevoTurnoToolStripMenuItem
             // 
             iniciarNuevoTurnoToolStripMenuItem.Name = "iniciarNuevoTurnoToolStripMenuItem";
-            iniciarNuevoTurnoToolStripMenuItem.Size = new Size(180, 22);
+            iniciarNuevoTurnoToolStripMenuItem.Size = new Size(173, 22);
             iniciarNuevoTurnoToolStripMenuItem.Text = "Iniciar nuevoTurno";
             iniciarNuevoTurnoToolStripMenuItem.Click += iniciarNuevoTurnoToolStripMenuItem_Click;
             // 
             // historialDeTurnosToolStripMenuItem
             // 
             historialDeTurnosToolStripMenuItem.Name = "historialDeTurnosToolStripMenuItem";
-            historialDeTurnosToolStripMenuItem.Size = new Size(180, 22);
+            historialDeTurnosToolStripMenuItem.Size = new Size(173, 22);
             historialDeTurnosToolStripMenuItem.Text = "Historial de Turnos";
             historialDeTurnosToolStripMenuItem.Click += historialDeTurnosToolStripMenuItem_Click;
             // 
             // cerrarTurnoToolStripMenuItem
             // 
             cerrarTurnoToolStripMenuItem.Name = "cerrarTurnoToolStripMenuItem";
-            cerrarTurnoToolStripMenuItem.Size = new Size(180, 22);
+            cerrarTurnoToolStripMenuItem.Size = new Size(173, 22);
             cerrarTurnoToolStripMenuItem.Text = "Cerrar Turno";
             // 
             // imiFacturar
@@ -252,8 +252,9 @@
             // verCajasToolStripMenuItem
             // 
             verCajasToolStripMenuItem.Name = "verCajasToolStripMenuItem";
-            verCajasToolStripMenuItem.Size = new Size(122, 22);
-            verCajasToolStripMenuItem.Text = "Ver cajas ";
+            verCajasToolStripMenuItem.Size = new Size(180, 22);
+            verCajasToolStripMenuItem.Text = "Registro de cajas";
+            verCajasToolStripMenuItem.Click += verCajasToolStripMenuItem_Click;
             // 
             // imiInventario
             // 

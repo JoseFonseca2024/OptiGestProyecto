@@ -34,5 +34,14 @@
         public const string SP_CREAR_PROVEEDOR = "sp_crear_proveedor";
         public const string SP_ACTUALIZAR_PROVEEDOR = "sp_actualizar_proveedor_por_empresa";
         public const string SP_ELIMINAR_PROVEEDOR = "sp_eliminar_proveedor_por_empresa";
+
+        //Cajas
+        public const string SP_OBTENER_CAJAS = "sp_obtener_cajas";
+        public const string SP_OBTENER_CAJA_POR_ID = "sp_obtener_caja_por_id";
+        public const string SP_OBTENER_CAJAS_POR_EMPRESA = "sp_obtener_cajas_por_empresa";
+        public const string SP_CREAR_CAJA = "sp_crear_caja";
+        public const string SP_ACTUALIZAR_CAJA = "sp_actualizar_caja";
+        public const string SP_ELIMINAR_CAJA = "sp_eliminar_caja";
+        public const string SP_TRANSFERENCIA_ENTRE_CAJAS = "sp_TransferenciaEntreCajas";
     }
 }

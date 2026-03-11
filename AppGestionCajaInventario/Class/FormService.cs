@@ -1,5 +1,6 @@
 ﻿using AppGestionCajaInventario.Controllers;
 using AppGestionCajaInventario.Forms.FormsLogins;
+using AppGestionCajaInventario.Models.Dto.Cajas;
 using AppGestionCajaInventario.Models.Dto.Clientes;
 using AppGestionCajaInventario.Models.Dto.Empresas;
 using AppGestionCajaInventario.Models.Dto.Productos;
@@ -468,5 +469,21 @@ namespace AppGestionCajaInventario.Class
         {
             return await proveedorRepository.EliminarAsync(id);
         }
+
+        public async Task CargarCajasporEmpresasAsync(ICajaRepository cajaRepository, DataGridView dgvCajas)
+        {
+            var cajas = await cajaRepository.ObtenerCajasporEmpresaAsync();
+            dgvCajas.DataSource = cajas;
+        }
+
+        public async Task<bool> RegistrarCajaAsync (ICajaRepository cajaRepository, CajaCreateDto dto)
+        {
+            return await cajaRepository.CrearAsync(dto);
+        }
+
+        public async Task<bool> ActualizarCajaAsync (ICajaRepository cajaRepository, int id, CajaUpdateDto dto)
+        {
+            return await cajaRepository.ActualizarAsync(id, dto);
+        } 
     }
 }

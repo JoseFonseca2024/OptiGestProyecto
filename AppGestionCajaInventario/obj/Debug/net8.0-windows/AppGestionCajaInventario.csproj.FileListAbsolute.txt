@@ -63,3 +63,4 @@ C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\Ap
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormsEntidadesExternas.FormProveedores.resources
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormTurnos.FormIniciarTurno.resources
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormTurnos.FormVerRegistroTurnos.resources
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormsCaja.FormRegistroCajas.resources

@@ -52,6 +52,8 @@ builder.Services.AddScoped<IProveedorRepository, ProveedorDAO>();
 builder.Services.AddScoped<ProveedorService>(); 
 builder.Services.AddScoped<ProductoService>();
 builder.Services.AddScoped<ClienteService>();
+builder.Services.AddScoped<IRepository<Cajas>, CajaDAO>();
+builder.Services.AddScoped<CajaService>();
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 

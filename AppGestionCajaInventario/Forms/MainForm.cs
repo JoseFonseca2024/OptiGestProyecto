@@ -1,6 +1,7 @@
 ﻿using AppGestionCajaInventario.Class;
 using AppGestionCajaInventario.Controllers;
 using AppGestionCajaInventario.Forms.FormProductos;
+using AppGestionCajaInventario.Forms.FormsCaja;
 using AppGestionCajaInventario.Forms.FormsEmpresa;
 using AppGestionCajaInventario.Forms.FormsEntidadesExternas;
 using AppGestionCajaInventario.Forms.FormsUsuario;
@@ -17,6 +18,7 @@ namespace AppGestionCajaInventario
         private readonly ProductoRepository _productoRepository;
         private readonly ClienteRepository _clienteRepository;
         private readonly ProveedorRepository _proveedorRepository;
+        private readonly CajasRepository _cajasRepository;
 
         public MainForm(ApiClient apiClient, string rol, string token)
         {
@@ -29,6 +31,8 @@ namespace AppGestionCajaInventario
             _productoRepository = new ProductoRepository(_apiClient.HttpClientInstance);
             _clienteRepository = new ClienteRepository(_apiClient.HttpClientInstance);
             _proveedorRepository = new ProveedorRepository(_apiClient.HttpClientInstance);
+            _cajasRepository = new CajasRepository(_apiClient.HttpClientInstance);
+
 
             timerFechayHora.Start();
             _formService.ConfigurarMenuPorRol(rol, imiEmpresas, imiUsuarios, imiCajas, imiOperaciones);
@@ -88,6 +92,12 @@ namespace AppGestionCajaInventario
         private void historialDeTurnosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new FormVerRegistroTurnos();
+            _formService.MostrarFormenPanel(form, panel1);
+        }
+
+        private void verCajasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormRegistroCajas(_cajasRepository);
             _formService.MostrarFormenPanel(form, panel1);
         }
     }
