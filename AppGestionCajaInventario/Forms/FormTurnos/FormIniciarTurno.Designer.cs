@@ -146,7 +146,6 @@
             txtMontoIncial.Location = new Point(192, 177);
             txtMontoIncial.Margin = new Padding(4, 3, 4, 3);
             txtMontoIncial.Name = "txtMontoIncial";
-            txtMontoIncial.ReadOnly = true;
             txtMontoIncial.Size = new Size(349, 23);
             txtMontoIncial.TabIndex = 6;
             // 
@@ -172,6 +171,7 @@
             btnAceptar.TextAlign = ContentAlignment.MiddleRight;
             btnAceptar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAceptar.UseVisualStyleBackColor = false;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // ibtnCancelar
             // 
@@ -195,6 +195,7 @@
             ibtnCancelar.TextAlign = ContentAlignment.MiddleRight;
             ibtnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             ibtnCancelar.UseVisualStyleBackColor = false;
+            ibtnCancelar.Click += ibtnCancelar_Click;
             // 
             // FormIniciarTurno
             // 
@@ -217,6 +218,7 @@
             Name = "FormIniciarTurno";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormIniciarTurno";
+            Load += FormIniciarTurno_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

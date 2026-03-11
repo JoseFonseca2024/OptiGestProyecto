@@ -43,5 +43,8 @@
         public const string SP_ACTUALIZAR_CAJA = "sp_actualizar_caja";
         public const string SP_ELIMINAR_CAJA = "sp_eliminar_caja";
         public const string SP_TRANSFERENCIA_ENTRE_CAJAS = "sp_TransferenciaEntreCajas";
+
+        //Turnos
+        public const string SP_ABRIR_TURNO = "sp_abrir_turno";
     }
 }

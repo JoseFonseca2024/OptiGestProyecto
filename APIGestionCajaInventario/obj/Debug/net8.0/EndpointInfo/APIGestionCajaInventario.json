@@ -1253,6 +1253,37 @@
         }
       }
     },
+    "/api/Turnos/abrir": {
+      "post": {
+        "tags": [
+          "Turnos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TurnoCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TurnoCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TurnoCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Usuario": {
       "get": {
         "tags": [
@@ -1996,6 +2027,24 @@
             "format": "int32"
           },
           "monto": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TurnoCreateDto": {
+        "type": "object",
+        "properties": {
+          "cajaID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usuarioID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "montoInicial": {
             "type": "number",
             "format": "double"
           }

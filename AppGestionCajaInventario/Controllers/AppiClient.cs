@@ -20,6 +20,7 @@ namespace AppGestionCajaInventario.Controllers
         public IClienteRepository Cliente { get; }
         public IProveedorRepository Proveedor { get; }
         public ICajaRepository Caja { get; }
+        public ITurnoRepository Turno { get; }
         public ApiClient()
         {
             string apiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"]!;
@@ -34,6 +35,7 @@ namespace AppGestionCajaInventario.Controllers
             Cliente = new ClienteRepository(HttpClientInstance);
             Proveedor = new ProveedorRepository(HttpClientInstance);
             Caja = new CajasRepository(HttpClientInstance);
+            Turno = new TurnoRepository(HttpClientInstance);
         }
 
         internal void SetAuthToken(string? token)

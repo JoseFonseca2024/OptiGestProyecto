@@ -19,6 +19,7 @@ namespace AppGestionCajaInventario
         private readonly ClienteRepository _clienteRepository;
         private readonly ProveedorRepository _proveedorRepository;
         private readonly CajasRepository _cajasRepository;
+        private readonly TurnoRepository _turnoRepository;
 
         public MainForm(ApiClient apiClient, string rol, string token)
         {
@@ -32,6 +33,7 @@ namespace AppGestionCajaInventario
             _clienteRepository = new ClienteRepository(_apiClient.HttpClientInstance);
             _proveedorRepository = new ProveedorRepository(_apiClient.HttpClientInstance);
             _cajasRepository = new CajasRepository(_apiClient.HttpClientInstance);
+            _turnoRepository = new TurnoRepository(_apiClient.HttpClientInstance);
 
 
             timerFechayHora.Start();
@@ -85,7 +87,7 @@ namespace AppGestionCajaInventario
 
         private void iniciarNuevoTurnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new FormIniciarTurno();
+            var form = new FormIniciarTurno(_adminRepository, _cajasRepository, _turnoRepository);
             form.ShowDialog();
         }
 

@@ -5,6 +5,7 @@ using AppGestionCajaInventario.Models.Dto.Clientes;
 using AppGestionCajaInventario.Models.Dto.Empresas;
 using AppGestionCajaInventario.Models.Dto.Productos;
 using AppGestionCajaInventario.Models.Dto.Proveedores;
+using AppGestionCajaInventario.Models.Dto.Turnos;
 using AppGestionCajaInventario.Models.Dto.Usuarios;
 using AppGestionCajaInventario.Models.Repository;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
@@ -340,6 +341,22 @@ namespace AppGestionCajaInventario.Class
             combo.ValueMember = "RolID";
         }
 
+        public async Task CargarUsuarioscmbAsync(IAdminRepository adminRepository, ComboBox combo)
+        {
+            var usuarios = await adminRepository.ObtenerUsuariosAsync();
+            combo.DataSource = usuarios;
+            combo.DisplayMember = "NombreUsuario";
+            combo.ValueMember = "UsuarioID";
+        }
+
+        public async Task CargarCajascmbAsync(ICajaRepository cajaRepository, ComboBox combo)
+        {
+            var cajas = await cajaRepository.ObtenerCajasporEmpresaAsync();
+            combo.DataSource = cajas;
+            combo.DisplayMember = "NombreCaja";
+            combo.ValueMember = "CajaID";
+        }
+
         public async Task RegistrarEmpresa(
             string nombre,
             string ruc,
@@ -484,6 +501,26 @@ namespace AppGestionCajaInventario.Class
         public async Task<bool> ActualizarCajaAsync (ICajaRepository cajaRepository, int id, CajaUpdateDto dto)
         {
             return await cajaRepository.ActualizarAsync(id, dto);
-        } 
+        }
+
+        public async Task<string> AbrirTurnoAsync(ITurnoRepository turnoRepository, ComboBox cmbU, ComboBox cmbC, TextBox txtSaldo)
+        {
+            try
+            {
+                var usuario = (int)cmbU.SelectedValue!;
+                var caja = (int)cmbC.SelectedValue!;
+                var monto = Convert.ToDecimal(txtSaldo.Text);
+
+                var dto = new TurnoCreateDto { CajaID = caja, UsuarioID = usuario, MontoInicial = monto };
+
+                var turnoId = await turnoRepository.AbrirAsync(dto);
+
+                return $"Turno abierto correctamente con ID {turnoId}";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message; 
+            }
+        }
     }
 }

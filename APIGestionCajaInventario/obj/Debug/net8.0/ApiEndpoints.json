@@ -730,6 +730,22 @@
     ]
   },
   {
+    "ContainingType": "APIGestionCajaInventario.Controllers.TurnosController",
+    "Method": "AbrirTurno",
+    "RelativePath": "api/Turnos/abrir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "APIGestionCajaInventario.Dto.Turnos.TurnoCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "APIGestionCajaInventario.Controllers.UsuarioController",
     "Method": "ObtenerUsuariosDeEmpresa",
     "RelativePath": "api/Usuario",
