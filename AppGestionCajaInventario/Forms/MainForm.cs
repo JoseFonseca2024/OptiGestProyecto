@@ -1,5 +1,6 @@
 ﻿using AppGestionCajaInventario.Class;
 using AppGestionCajaInventario.Controllers;
+using AppGestionCajaInventario.Forms.FormFacturación;
 using AppGestionCajaInventario.Forms.FormProductos;
 using AppGestionCajaInventario.Forms.FormsCaja;
 using AppGestionCajaInventario.Forms.FormsEmpresa;
@@ -100,6 +101,12 @@ namespace AppGestionCajaInventario
         private void verCajasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new FormRegistroCajas(_cajasRepository);
+            _formService.MostrarFormenPanel(form, panel1);
+        }
+
+        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormFacturación();
             _formService.MostrarFormenPanel(form, panel1);
         }
     }
