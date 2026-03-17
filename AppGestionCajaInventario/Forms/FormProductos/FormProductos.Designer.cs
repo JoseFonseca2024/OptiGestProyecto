@@ -59,6 +59,7 @@
             dgvProductos.Size = new Size(575, 487);
             dgvProductos.TabIndex = 4;
             dgvProductos.CellClick += dgvProductos_CellClick;
+            dgvProductos.CellDoubleClick += dgvProductos_CellDoubleClick;
             // 
             // panel1
             // 

@@ -76,3 +76,4 @@ C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\Ap
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\RBush.dll
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\System.IO.Packaging.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormCotización.Cotización.resources

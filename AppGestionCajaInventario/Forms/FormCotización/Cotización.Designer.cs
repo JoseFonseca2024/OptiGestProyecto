@@ -1,6 +1,6 @@
-﻿namespace AppGestionCajaInventario.Forms.FormFacturación
+﻿namespace AppGestionCajaInventario.Forms.FormCotización
 {
-    partial class FormFacturación
+    partial class Cotización
     {
         /// <summary>
         /// Required designer variable.
@@ -91,10 +91,10 @@
             panel1.Controls.Add(txtTotalaPagar);
             panel1.Controls.Add(txtSubtotal);
             panel1.Controls.Add(lblTitulo);
-            panel1.Location = new Point(52, 25);
+            panel1.Location = new Point(48, 19);
             panel1.Name = "panel1";
             panel1.Size = new Size(1001, 501);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 1;
             // 
             // ibtPago
             // 
@@ -108,7 +108,7 @@
             ibtPago.Name = "ibtPago";
             ibtPago.Size = new Size(111, 45);
             ibtPago.TabIndex = 7;
-            ibtPago.Text = "Proceder al pago\r\n";
+            ibtPago.Text = "Generar Cotización";
             ibtPago.TextImageRelation = TextImageRelation.ImageBeforeText;
             ibtPago.UseVisualStyleBackColor = false;
             // 
@@ -505,20 +505,20 @@
             lblTitulo.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTitulo.Location = new Point(20, 11);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(130, 28);
+            lblTitulo.Size = new Size(118, 28);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Facturación";
+            lblTitulo.Text = "Cotización";
             // 
-            // FormFacturación
+            // Cotización
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SteelBlue;
             ClientSize = new Size(1096, 538);
             Controls.Add(panel1);
-            Name = "FormFacturación";
-            Text = "FormFacturación";
-            Load += FormFacturación_Load;
+            Name = "Cotización";
+            Text = "Cotización";
+            Load += Cotización_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgtvDetallesFactura).EndInit();
@@ -535,43 +535,42 @@
         #endregion
 
         private Panel panel1;
-        private Label lblTitulo;
-        private GroupBox gpbCliente;
-        private GroupBox gpbInformación;
-        private Label lblFecha;
-        private DateTimePicker dtpFecha;
-        private TextBox txtRUC;
-        private Label lblRUC;
-        private Label lblNombreCliente;
-        private TextBox txtNombreCliente;
-        private Label lblNumero;
-        private MaskedTextBox msktxtNumero;
-        private FontAwesome.Sharp.IconButton ibtnBuscarCliente;
-        private GroupBox gpbProducto;
-        private Label lblCodigoProducto;
-        private TextBox txtCodigoProducto;
-        private FontAwesome.Sharp.IconButton ibtnBuscarProducto;
-        private TextBox txtPrecio;
-        private TextBox txtNombreProducto;
-        private Label lblPrecio;
-        private Label lblNombreProducto;
-        private TextBox txtStock;
-        private Label lblStock;
-        private NumericUpDown numericUpDown1;
-        private Label lblDescuento;
-        private Label lblCantidad;
-        private FontAwesome.Sharp.IconButton ibtnAgregar;
-        private TextBox txtDescuento;
-        private GroupBox gpbControles;
-        private FontAwesome.Sharp.IconButton ibtnEditar;
-        private FontAwesome.Sharp.IconButton ibtnEliminar;
-        private DataGridView dgtvDetallesFactura;
+        private FontAwesome.Sharp.IconButton ibtPago;
         private Label lblTotal;
         private Label lblIVA;
         private Label lblSubTotal;
+        private DataGridView dgtvDetallesFactura;
+        private GroupBox gpbProducto;
+        private FontAwesome.Sharp.IconButton ibtnEliminar;
+        private NumericUpDown numericUpDown1;
+        private FontAwesome.Sharp.IconButton ibtnEditar;
+        private FontAwesome.Sharp.IconButton ibtnBuscarProducto;
+        private FontAwesome.Sharp.IconButton ibtnAgregar;
+        private TextBox txtDescuento;
+        private TextBox txtStock;
+        private TextBox txtPrecio;
+        private TextBox txtNombreProducto;
+        private Label lblDescuento;
+        private Label lblCantidad;
+        private Label lblStock;
+        private TextBox txtCodigoProducto;
+        private Label lblPrecio;
+        private Label lblNombreProducto;
+        private Label lblCodigoProducto;
+        private GroupBox gpbInformación;
+        private TextBox txtRUC;
+        private Label lblRUC;
+        private Label lblFecha;
+        private DateTimePicker dtpFecha;
+        private GroupBox gpbCliente;
+        private FontAwesome.Sharp.IconButton ibtnBuscarCliente;
+        private MaskedTextBox msktxtNumero;
+        private TextBox txtNombreCliente;
+        private Label lblNumero;
+        private Label lblNombreCliente;
         private TextBox txtIVA;
         private TextBox txtTotalaPagar;
         private TextBox txtSubtotal;
-        private FontAwesome.Sharp.IconButton ibtPago;
+        private Label lblTitulo;
     }
 }

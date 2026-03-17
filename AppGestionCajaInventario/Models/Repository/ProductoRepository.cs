@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AppGestionCajaInventario.Models.Repository
 {
-    internal class ProductoRepository : IProductoRepository
+    public class ProductoRepository : IProductoRepository
     {
         private readonly HttpClient _http;
 

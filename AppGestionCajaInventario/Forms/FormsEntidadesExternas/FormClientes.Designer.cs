@@ -55,6 +55,7 @@
             dgvCliente.Size = new Size(575, 353);
             dgvCliente.TabIndex = 8;
             dgvCliente.CellClick += dgvCliente_CellClick;
+            dgvCliente.CellDoubleClick += dgvCliente_CellDoubleClick;
             // 
             // panel1
             // 

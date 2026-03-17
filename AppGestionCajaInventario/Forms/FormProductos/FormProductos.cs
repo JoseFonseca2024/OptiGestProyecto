@@ -18,6 +18,10 @@ namespace AppGestionCajaInventario.Forms.FormProductos
     {
         private readonly FormService formService = new FormService();
         private readonly IProductoRepository _productoRepository;
+
+        //Evento para forms alternos
+        public event Action<ProductosDto>? ProductoSeleccionado;
+
         public FormProductos(IProductoRepository productoRepository)
         {
             InitializeComponent();
@@ -130,6 +134,16 @@ namespace AppGestionCajaInventario.Forms.FormProductos
                 txtCodigoProducto.Text = producto.CodigoProducto;
                 txtCosto.Text = producto.CostoPromedio.ToString();
                 txtPrecio.Text = producto.PrecioUnitario.ToString();
+            }
+        }
+
+        private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var producto = (ProductosDto)dgvProductos.Rows[e.RowIndex].DataBoundItem;
+                ProductoSeleccionado?.Invoke(producto);
+                this.Close(); // cerrar el form después de seleccionar
             }
         }
     }

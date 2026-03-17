@@ -18,7 +18,7 @@ namespace APIGestionCajaInventario.DAO
 
             using var cn = _conexion.GetConnection();
             using var cmd = new SqlCommand(
-                "SELECT * FROM vw_VentasMovimientos WHERE YEAR(FechaMovimiento) = @Anio ORDER BY FechaMovimiento;", cn);
+                $@"SELECT * FROM {Vistas.VW_VENTASMOVIMIENTOS} WHERE YEAR(FechaMovimiento) = @Anio ORDER BY FechaMovimiento;", cn);
 
             cmd.Parameters.AddWithValue("@Anio", anio);
 

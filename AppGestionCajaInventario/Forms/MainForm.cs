@@ -1,5 +1,6 @@
 ﻿using AppGestionCajaInventario.Class;
 using AppGestionCajaInventario.Controllers;
+using AppGestionCajaInventario.Forms.FormCotización;
 using AppGestionCajaInventario.Forms.FormFacturación;
 using AppGestionCajaInventario.Forms.FormProductos;
 using AppGestionCajaInventario.Forms.FormReportes;
@@ -110,13 +111,19 @@ namespace AppGestionCajaInventario
 
         private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new FormFacturación();
+            var form = new FormFacturación(_adminRepository, _clienteRepository, _productoRepository);
             _formService.MostrarFormenPanel(form, panel1);
         }
 
         private void toolStripMenuItem12_Click(object sender, EventArgs e)
         {
             var form = new FormReportedeVentas(_reporteRepository);
+            _formService.MostrarFormenPanel(form, panel1);
+        }
+
+        private void imiCotizar_Click(object sender, EventArgs e)
+        {
+            var form = new Cotización(_adminRepository, _clienteRepository, _productoRepository);
             _formService.MostrarFormenPanel(form, panel1);
         }
     }

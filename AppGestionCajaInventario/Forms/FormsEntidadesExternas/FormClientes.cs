@@ -17,6 +17,10 @@ namespace AppGestionCajaInventario.Forms.FormsEntidadesExternas
     {
         private readonly FormService formService = new FormService();
         private readonly IClienteRepository _clienteRepository;
+
+        //Evento para forms alternos
+        public event Action<ClienteDto>? ClienteSeleccionado;
+
         public FormClientes(IClienteRepository clienteRepository)
         {
             InitializeComponent();
@@ -111,6 +115,16 @@ namespace AppGestionCajaInventario.Forms.FormsEntidadesExternas
                 var cliente = (ClienteDto)dgvCliente.Rows[e.RowIndex].DataBoundItem;
                 txtNombreCliente.Text = cliente.NombreCliente;
                 txtTelefono.Text = cliente.TelefonoCliente;
+            }
+        }
+
+        private void dgvCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var cliente = (ClienteDto)dgvCliente.Rows[e.RowIndex].DataBoundItem;
+                ClienteSeleccionado?.Invoke(cliente);
+                this.Close(); // cerrar el form después de seleccionar
             }
         }
     }

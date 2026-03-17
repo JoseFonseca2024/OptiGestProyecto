@@ -236,6 +236,7 @@
             imiCotizar.Size = new Size(62, 69);
             imiCotizar.Text = "Cotizar";
             imiCotizar.TextImageRelation = TextImageRelation.ImageAboveText;
+            imiCotizar.Click += imiCotizar_Click;
             // 
             // imiCajas
             // 
