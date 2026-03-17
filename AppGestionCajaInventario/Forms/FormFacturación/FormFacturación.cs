@@ -64,5 +64,11 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
                 txtRUC.Clear();
             }
         }
+
+        private void ibtPago_Click(object sender, EventArgs e)
+        {
+            var formPago = new FormPago();
+            formPago.ShowDialog();
+        }
     }
 }

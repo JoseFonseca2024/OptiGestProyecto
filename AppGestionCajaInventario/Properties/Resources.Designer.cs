@@ -63,6 +63,16 @@ namespace AppGestionCajaInventario.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap billete100cordobas__1_ {
+            get {
+                object obj = ResourceManager.GetObject("billete100cordobas (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OptiGestLogo {
             get {
                 object obj = ResourceManager.GetObject("OptiGestLogo", resourceCulture);

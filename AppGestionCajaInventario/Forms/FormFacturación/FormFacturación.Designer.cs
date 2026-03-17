@@ -111,6 +111,7 @@
             ibtPago.Text = "Proceder al pago\r\n";
             ibtPago.TextImageRelation = TextImageRelation.ImageBeforeText;
             ibtPago.UseVisualStyleBackColor = false;
+            ibtPago.Click += ibtPago_Click;
             // 
             // lblTotal
             // 

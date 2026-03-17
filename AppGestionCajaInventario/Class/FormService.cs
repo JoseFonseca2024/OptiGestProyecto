@@ -24,7 +24,7 @@ namespace AppGestionCajaInventario.Class
 {
     public class FormService
     {
-
+        private decimal totalAcumulado = 0; //Variable de almacenamiento del valor con que se paga
         public void MostrarFormenPanel(Form form, Panel panel)
         {
             if (panel.Controls.Count > 0)
@@ -521,6 +521,16 @@ namespace AppGestionCajaInventario.Class
             {
                 return ex.Message; 
             }
+        }
+
+        public void RegistroDenominación(Button btn, int Denominación, TextBox txt)
+        {
+            btn.Click += (s, e) =>
+            {
+                decimal dinero = Convert.ToDecimal(Denominación);
+                totalAcumulado += dinero;
+                txt.Text = totalAcumulado.ToString("N2");
+            };
         }
     }
 }
