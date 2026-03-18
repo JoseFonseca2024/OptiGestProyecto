@@ -1,4 +1,5 @@
-﻿using AppGestionCajaInventario.Models.Dto.Cajas;
+﻿using AppGestionCajaInventario.Models.Dto;
+using AppGestionCajaInventario.Models.Dto.Cajas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace AppGestionCajaInventario.Models.Repository.Interfaces
 {
     public interface ICajaRepository
     {
-        Task<List<CajasDto>> ObtenerCajasporEmpresaAsync();
+        Task<ApiResponse<List<CajasDto>>> ObtenerCajasporEmpresaAsync();
         Task<CajasDto?> ObtenerPorIdAsync(int id);
         Task<bool> CrearAsync(CajaCreateDto dto);
         Task<bool> ActualizarAsync(int id, CajaUpdateDto dto);

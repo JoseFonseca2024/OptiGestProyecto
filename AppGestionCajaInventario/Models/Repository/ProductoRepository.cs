@@ -1,4 +1,5 @@
-﻿using AppGestionCajaInventario.Models.Dto.Productos;
+﻿using AppGestionCajaInventario.Models.Dto;
+using AppGestionCajaInventario.Models.Dto.Productos;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -18,16 +19,18 @@ namespace AppGestionCajaInventario.Models.Repository
             _http = http;
         }
 
-        public async Task<List<ProductosDto>> ObtenerProductosPorEmpresaAsync()
+        public async Task<ApiResponse<List<ProductosDto>>> ObtenerProductosPorEmpresaAsync()
         {
             var response = await _http.GetAsync("Productos/por-empresa");
-            response.EnsureSuccessStatusCode();
 
             var json = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<List<ProductosDto>>(json, new JsonSerializerOptions
+
+            var apiResponse = JsonSerializer.Deserialize<ApiResponse<List<ProductosDto>>>(json, new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
-            }) ?? new List<ProductosDto>();
+            });
+
+            return apiResponse!;
         }
 
         public async Task<ProductosDto?> ObtenerPorIdAsync(int id)

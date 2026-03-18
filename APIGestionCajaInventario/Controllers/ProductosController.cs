@@ -1,4 +1,5 @@
-﻿using APIGestionCajaInventario.Dto.Productos;
+﻿using APIGestionCajaInventario.Dto;
+using APIGestionCajaInventario.Dto.Productos;
 using APIGestionCajaInventario.Models;
 using APIGestionCajaInventario.Services;
 using AutoMapper;
@@ -25,11 +26,44 @@ namespace APIGestionCajaInventario.Controllers
 
         [Authorize(Roles = "Administrador,Cajero")]
         [HttpGet("por-empresa")]
-        public async Task<ActionResult<IEnumerable<ProductosDto>>> GetAll()
+        public async Task<ActionResult> GetAll()
         {
-            var productos = await _service.ObtenerProductosPorEmpresaAsync(User);
-            var dto = _mapper.Map<List<ProductosDto>>(productos);
-            return Ok(dto);
+            try
+            {
+                var productos = await _service.ObtenerProductosPorEmpresaAsync(User);
+                var productosDto = _service.ObtenerProductosDto(_mapper, productos);
+
+                var response = new ApiResponse<List<ProductosDto>>
+                {
+                    Error = false,
+                    Message = "Productos de la empresa obtenidos correctamente.",
+                    Data = productosDto.ToList()
+                };
+
+                return StatusCode(StatusCodes.Status200OK, response);
+
+            } catch (UnauthorizedAccessException e)
+            {
+                var response = new ApiResponse<List<ProductosDto>>
+                {
+                    Error = true,
+                    Message = e.Message,
+                    Data = null
+                };
+
+                return StatusCode(StatusCodes.Status403Forbidden, response);
+
+            } catch (InvalidOperationException e)
+            {
+                var response = new ApiResponse<List<ProductosDto>>
+                {
+                    Error = true,
+                    Message = e.Message,
+                    Data = null
+                };
+
+                return StatusCode(StatusCodes.Status404NotFound, response);
+            }
         }
 
         [Authorize(Roles = "Administrador,Cajero")]

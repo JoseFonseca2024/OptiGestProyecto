@@ -2,6 +2,7 @@
 using APIGestionCajaInventario.DAO.Interfaces;
 using APIGestionCajaInventario.Dto.Productos;
 using APIGestionCajaInventario.Models;
+using AutoMapper;
 using DocumentFormat.OpenXml.Spreadsheet;
 using System.Security.Claims;
 
@@ -16,6 +17,12 @@ namespace APIGestionCajaInventario.Services
         {
             _repository = repository;
             _usuarioDAO = usuarioDAO;
+        }
+
+        public List<ProductosDto> ObtenerProductosDto(IMapper _mapper, IEnumerable<Producto> productos)
+        {
+            var dto = _mapper.Map<List<ProductosDto>>(productos);
+            return dto;
         }
 
         public async Task<IEnumerable<Producto>> ObtenerProductosPorEmpresaAsync(ClaimsPrincipal user)
