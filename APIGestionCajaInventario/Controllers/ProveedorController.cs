@@ -1,4 +1,5 @@
-﻿using APIGestionCajaInventario.Dto.Proveedores;
+﻿using APIGestionCajaInventario.Dto;
+using APIGestionCajaInventario.Dto.Proveedores;
 using APIGestionCajaInventario.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -22,10 +23,46 @@ namespace APIGestionCajaInventario.Controllers
 
         [Authorize(Roles = "Administrador,Cajero")]
         [HttpGet("por-empresa")]
-        public async Task<ActionResult<IEnumerable<ProveedorDto>>> GetAll()
+        public async Task<ActionResult> GetAll()
         {
-            var proveedores = await _proveedorService.ObtenerPorEmpresaAsync(User);
-            return Ok(proveedores);
+            try
+            {
+                var proveedores = await _proveedorService.ObtenerPorEmpresaAsync(User);
+                var proveedoresDto = _proveedorService.ObtenerProveedoresDto(_mapper, proveedores);
+
+                var response = new ApiResponse<List<ProveedorDto>>
+                {
+                    Error = false,
+                    Message = "Proveedores de la empresa obtenidos correctamente.",
+                    Data = proveedoresDto.ToList()
+                };
+
+                return StatusCode(StatusCodes.Status200OK, response);
+
+            }
+            catch (UnauthorizedAccessException e)
+            {
+                var response = new ApiResponse<List<ProveedorDto>>
+                {
+                    Error = true,
+                    Message = e.Message,
+                    Data = null
+                };
+
+                return StatusCode(StatusCodes.Status403Forbidden, response);
+
+            }
+            catch (InvalidOperationException e)
+            {
+                var response = new ApiResponse<List<ProveedorDto>>
+                {
+                    Error = true,
+                    Message = e.Message,
+                    Data = null
+                };
+
+                return StatusCode(StatusCodes.Status404NotFound, response);
+            }
         }
 
         [Authorize(Roles = "Administrador,Cajero")]

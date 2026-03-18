@@ -16,5 +16,11 @@ namespace APIGestionCajaInventario.Services
         {
             return await _turnoDAO.AbrirTurnoAsync(dto.CajaID, dto.UsuarioID, dto.MontoInicial);
         }
+
+        public async Task<TurnoDto?> ObtenerTurnoActivoAsync(int usuarioId)
+        {
+            return await _turnoDAO.ObtenerTurnoActivoAsync(usuarioId);
+        }
+
     }
 }

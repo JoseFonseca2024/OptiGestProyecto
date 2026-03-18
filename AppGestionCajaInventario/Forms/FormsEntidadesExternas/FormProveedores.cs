@@ -26,7 +26,8 @@ namespace AppGestionCajaInventario.Forms.FormsEntidadesExternas
 
         private async void FormProveedores_Load(object sender, EventArgs e)
         {
-            await formService.CargarProveedoresAsync(_proveedorRepository, dgvProveedor);
+            var success = await formService.CargarProveedoresAsync(_proveedorRepository, dgvProveedor);
+            if (!success) this.Close();
         }
 
         private async void ibtnRegistrar_Click(object sender, EventArgs e)

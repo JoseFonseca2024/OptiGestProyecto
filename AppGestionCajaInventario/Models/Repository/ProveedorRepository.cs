@@ -1,4 +1,5 @@
-﻿using AppGestionCajaInventario.Models.Dto.Proveedores;
+﻿using AppGestionCajaInventario.Models.Dto;
+using AppGestionCajaInventario.Models.Dto.Proveedores;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -18,16 +19,17 @@ namespace AppGestionCajaInventario.Models.Repository
             _http = http;
         }
 
-        public async Task<IEnumerable<ProveedorDto?>> GetAllPorEmpresaAsync()
+        public async Task<ApiResponse<List<ProveedorDto>>> GetAllPorEmpresaAsync()
         {
             var response = await _http.GetAsync("Proveedor/por-empresa");
             response.EnsureSuccessStatusCode();
 
             var json = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<List<ProveedorDto>>(json, new JsonSerializerOptions
+            var apiResponse = JsonSerializer.Deserialize<ApiResponse<List<ProveedorDto>>>(json, new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
-            }) ?? new List<ProveedorDto>();
+            });
+            return apiResponse!;
         }
 
         public async Task<ProveedorDto?> GetByIdPorEmpresaAsync(int id)

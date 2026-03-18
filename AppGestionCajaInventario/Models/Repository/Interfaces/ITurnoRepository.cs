@@ -11,6 +11,7 @@ namespace AppGestionCajaInventario.Models.Repository.Interfaces
     {
         Task<int?> AbrirAsync(TurnoCreateDto dto);
         Task<List<TurnosDto>> ObtenerActivosAsync();
+        Task<TurnosDto?> ObtenerTurnoActivoAsync();
     }
 
 

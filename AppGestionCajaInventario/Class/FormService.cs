@@ -2,6 +2,7 @@
 using AppGestionCajaInventario.Forms.FormsLogins;
 using AppGestionCajaInventario.Models.Dto.Cajas;
 using AppGestionCajaInventario.Models.Dto.Clientes;
+using AppGestionCajaInventario.Models.Dto.Documentos;
 using AppGestionCajaInventario.Models.Dto.Empresas;
 using AppGestionCajaInventario.Models.Dto.Facturas;
 using AppGestionCajaInventario.Models.Dto.Productos;
@@ -62,7 +63,7 @@ namespace AppGestionCajaInventario.Class
                     MessageBox.Show("Inicio de sesión exitoso.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _apiClient.SetAuthToken(token);
                     form1.Hide();
-                    var mainForm = new MainForm(_apiClient, rol, token);
+                    var mainForm = new MainForm(_apiClient, rol, token, loginResponse);
                     mainForm.Show();
                 }
                 else
@@ -425,10 +426,26 @@ namespace AppGestionCajaInventario.Class
             }
         }
 
-        public async Task CargarProductos(IProductoRepository _productoRepository, DataGridView dgvProductos)
+        public async Task<bool> CargarProductos(IProductoRepository _productoRepository, DataGridView dgvProductos)
         {
-            var productos = await _productoRepository.ObtenerProductosPorEmpresaAsync();
-            dgvProductos.DataSource = productos;
+            var response = await _productoRepository.ObtenerProductosPorEmpresaAsync();
+
+            if (!response.Error)
+            {
+                dgvProductos.DataSource = response.Data!;
+                return true;
+
+            }
+            else
+            {
+                MessageBox.Show(
+                    $"Error al cargar productos: {response.Message}",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return false;
+            }
         }
 
         public async Task<bool> AgregarProductoAsync(IProductoRepository productoRepository, ProductosCreateDto productosDto)
@@ -446,10 +463,27 @@ namespace AppGestionCajaInventario.Class
             return await productoRepository.EliminarAsync(id);
         }
 
-        public async Task CargarClientesAsync(IClienteRepository clienteRepository, DataGridView dgvClientes)
+        public async Task<bool> CargarClientesAsync(IClienteRepository clienteRepository, DataGridView dgvClientes)
         {
-            var clientes = await clienteRepository.ObtenerClientesPorEmpresaAsync();
-            dgvClientes.DataSource = clientes;
+            var response = await clienteRepository.ObtenerClientesPorEmpresaAsync();
+
+            if (!response.Error)
+            {
+                dgvClientes.DataSource = response.Data;
+                Console.WriteLine(response.Message);
+                return true;
+
+            }
+            else
+            {
+                MessageBox.Show(
+                    $"Error al cargar clientes: {response.Message}",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return false;
+            }
         }
 
         public async Task<bool> RegistrarClienteAsync(IClienteRepository clienteRepository, ClienteCreateDto dto)
@@ -467,10 +501,26 @@ namespace AppGestionCajaInventario.Class
             return await clienteRepository.EliminarAsync(id);
         }
 
-        public async Task CargarProveedoresAsync(IProveedorRepository proveedorRepository, DataGridView dgvProveedores)
+        public async Task<bool>CargarProveedoresAsync(IProveedorRepository proveedorRepository, DataGridView dgvProveedores)
         {
-            var proveedores = await proveedorRepository.GetAllPorEmpresaAsync();
-            dgvProveedores.DataSource = proveedores;
+            var response = await proveedorRepository.GetAllPorEmpresaAsync();
+
+            if (!response.Error)
+            {
+                dgvProveedores.DataSource = response.Message!;
+                return true;
+
+            }
+            else
+            {
+                MessageBox.Show(
+                    $"Error al cargar proveedores: {response.Message}",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return false;
+            }
         }
 
         public async Task<bool> RegistrarProveedorAsync(IProveedorRepository proveedorRepository, ProveedorCreateDto dto)
@@ -488,11 +538,14 @@ namespace AppGestionCajaInventario.Class
             return await proveedorRepository.EliminarAsync(id);
         }
 
-        public async Task CargarCajasporEmpresasAsync(ICajaRepository cajaRepository, DataGridView dgvCajas)
+        public async Task<bool> CargarCajasporEmpresasAsync(ICajaRepository cajaRepository, DataGridView dgvCajas)
         {
             var cajas = await cajaRepository.ObtenerCajasporEmpresaAsync();
+
             dgvCajas.DataSource = cajas;
+            return true;
         }
+
 
         public async Task<bool> RegistrarCajaAsync (ICajaRepository cajaRepository, CajaCreateDto dto)
         {
@@ -545,6 +598,37 @@ namespace AppGestionCajaInventario.Class
             txtSubtotal.Text = subtotal.ToString("N2");
             txtIVA.Text = iva.ToString("N2");
             txtTotal.Text = total.ToString("N2");
+        }
+
+        public async Task<DocumentoResponseDto?> RegistrarFacturaAsync(
+                decimal totalFactura,
+                List<DetalleDocumentoTempDto> detallesTemp,
+                int clienteId,
+                int empresaId,
+                int usuarioId, ApiClient apiClient)
+        {
+            var turno = await apiClient.Turno.ObtenerTurnoActivoAsync();
+            if (turno == null) throw new Exception("No hay turno activo para este usuario");
+
+            var request = new DocumentoRequestDto
+            {
+                EmpresaID = empresaId,
+                ClienteID = clienteId,
+                TurnoID = turno.TurnoID,
+                TasaIVA = 15,
+                UsuarioID = usuarioId,
+                TipoDocumentoID = 1, // Factura
+                ConceptoID = 1,      // Contado
+                Detalles = detallesTemp.Select(d => new DetalleDocumentoDto
+                {
+                    ProductoID = d.ProductoID,
+                    Cantidad = d.Cantidad,
+                    PrecioUnitario = d.PrecioUnitario,
+                    PorcentajeDescuento = d.PorcentajeDescuento
+                }).ToList()
+            };
+
+            return await apiClient.Documento.RegistrarDocumentoAsync(request);
         }
     }
 }

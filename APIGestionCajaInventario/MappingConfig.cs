@@ -7,6 +7,7 @@ using APIGestionCajaInventario.Dto.Clientes;
 using APIGestionCajaInventario.Dto.Proveedores;
 using APIGestionCajaInventario.Dto.Cajas;
 using APIGestionCajaInventario.Dto.Turnos;
+using APIGestionCajaInventario.Dto.Documentos;
 
 namespace APIGestionCajaInventario
 {
@@ -38,11 +39,13 @@ namespace APIGestionCajaInventario
             CreateMap<Rol, RolDto>().ReverseMap();
 
             CreateMap<TurnosOperativos, TurnoDto>()
-        .ForMember(dest => dest.NombreCaja, opt => opt.MapFrom(src => src.NombreCaja))
-        .ForMember(dest => dest.NombreUsuario, opt => opt.MapFrom(src => src.NombreUsuario))
-        .ReverseMap();
+                .ForMember(dest => dest.NombreCaja, opt => opt.MapFrom(src => src.NombreCaja))
+                .ForMember(dest => dest.NombreUsuario, opt => opt.MapFrom(src => src.NombreUsuario))
+                .ForMember(dest => dest.FechaApertura, opt => opt.MapFrom(src => src.FechaApertura))
+                .ReverseMap();
 
             CreateMap<TurnoCreateDto, TurnosOperativos>();
+
 
         }
 

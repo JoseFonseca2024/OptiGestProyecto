@@ -1,4 +1,5 @@
-﻿using AppGestionCajaInventario.Models.Dto.Clientes;
+﻿using AppGestionCajaInventario.Models.Dto;
+using AppGestionCajaInventario.Models.Dto.Clientes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace AppGestionCajaInventario.Models.Repository.Interfaces
 {
     public interface IClienteRepository
     {
-        Task<IEnumerable<ClienteDto?>> ObtenerClientesPorEmpresaAsync();
+        Task<ApiResponse<List<ClienteDto>>> ObtenerClientesPorEmpresaAsync();
         Task<ClienteDto?> ObtenerPorIdAsync(int id);
         Task<bool> CrearAsync(ClienteCreateDto dto);
         Task<bool> ActualizarAsync(int id, ClienteUpdateDto dto);

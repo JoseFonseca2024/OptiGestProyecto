@@ -1,4 +1,5 @@
-﻿using AppGestionCajaInventario.Models.Dto.Cajas;
+﻿using AppGestionCajaInventario.Models.Dto;
+using AppGestionCajaInventario.Models.Dto.Cajas;
 using System;
 using System.Collections.Generic;
 using System.Linq;

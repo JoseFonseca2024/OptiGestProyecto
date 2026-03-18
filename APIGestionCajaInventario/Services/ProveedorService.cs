@@ -3,6 +3,7 @@ using APIGestionCajaInventario.DAO;
 using APIGestionCajaInventario.DAO.Interfaces;
 using APIGestionCajaInventario.Dto.Proveedores;
 using APIGestionCajaInventario.Models;
+using AutoMapper;
 
 namespace APIGestionCajaInventario.Services
 {
@@ -17,7 +18,13 @@ namespace APIGestionCajaInventario.Services
             _usuarioDAO = usuarioDAO;
         }
 
-        public async Task<IEnumerable<ProveedorDto>> ObtenerPorEmpresaAsync(ClaimsPrincipal user)
+        public List<ProveedorDto> ObtenerProveedoresDto(IMapper _mapper, IEnumerable<Proveedor> proveedores)
+        {
+            var dto = _mapper.Map<List<ProveedorDto>>(proveedores);
+            return dto;
+        }
+
+        public async Task<IEnumerable<Proveedor>> ObtenerPorEmpresaAsync(ClaimsPrincipal user)
         {
             var usuarioIdClaim = user.FindFirst(ClaimTypes.NameIdentifier);
             if (usuarioIdClaim == null)
@@ -30,12 +37,7 @@ namespace APIGestionCajaInventario.Services
 
             var proveedores = await _repository.GetAllPorEmpresaAsync(empresa.EmpresaID);
 
-            return proveedores.Select(p => new ProveedorDto
-            {
-                ProveedorID = p.ProveedorID,
-                NombreProveedor = p.NombreProveedor,
-                TelefonoProveedor = p.TelefonoProveedor,
-            });
+            return proveedores;
         }
 
         public async Task<ProveedorDto?> ObtenerPorIdAsync(int id, ClaimsPrincipal user)

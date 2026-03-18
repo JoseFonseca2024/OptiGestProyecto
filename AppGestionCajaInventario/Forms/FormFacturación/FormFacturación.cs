@@ -1,6 +1,8 @@
 ﻿using AppGestionCajaInventario.Class;
+using AppGestionCajaInventario.Controllers;
 using AppGestionCajaInventario.Forms.FormProductos;
 using AppGestionCajaInventario.Forms.FormsEntidadesExternas;
+using AppGestionCajaInventario.Models.Dto;
 using AppGestionCajaInventario.Models.Dto.Facturas;
 using AppGestionCajaInventario.Models.Dto.Productos;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
@@ -21,6 +23,8 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
         private readonly IClienteRepository _clienteRepository;
         private readonly IProductoRepository _productoRepository;
         private readonly IAdminRepository _adminRepository;
+        private readonly IUserRepository _userRepository;
+        private readonly LoginResponse _loginResponse;
 
         private readonly FormService formService = new FormService();
 
@@ -28,12 +32,27 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
 
         private readonly List<DetalleDocumentoTempDto> _detallesTemp = new();
 
-        public FormFacturación(IAdminRepository adminRepository, IClienteRepository clienteRepository, IProductoRepository productoRepository)
+        private int _clienteId;
+        private int _empresaId;
+        private int _usuarioId;
+
+        private readonly ApiClient _apiClient;
+
+
+        public FormFacturación(IAdminRepository adminRepository,
+                       IClienteRepository clienteRepository,
+                       IProductoRepository productoRepository,
+                       ApiClient apiClient,
+                       IUserRepository userRepository,
+                       LoginResponse loginResponse)
         {
             InitializeComponent();
-            _adminRepository = adminRepository ?? throw new ArgumentNullException(nameof(adminRepository));
+            _adminRepository = adminRepository;
             _clienteRepository = clienteRepository;
             _productoRepository = productoRepository;
+            _apiClient = apiClient;
+            _userRepository = userRepository;
+            _loginResponse = loginResponse;
         }
 
         private void ibtnBuscarCliente_Click(object sender, EventArgs e)
@@ -43,6 +62,7 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
             {
                 txtNombreCliente.Text = cliente.NombreCliente;
                 msktxtNumero.Text = cliente.TelefonoCliente;
+                _clienteId = cliente.ClienteID;
             };
             formClientes.Show();
         }
@@ -64,20 +84,33 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
         private async void FormFacturación_Load(object sender, EventArgs e)
         {
             var empresa = await _adminRepository.ObtenerEmpresaDelUsuarioAsync();
-
             if (empresa != null)
             {
                 txtRUC.Text = empresa.RUC;
+                _empresaId = empresa.EmpresaID;
             }
-            else
-            {
-                txtRUC.Clear();
-            }
+
+            _usuarioId = _loginResponse.UsuarioID; 
         }
+
+
+
 
         private void ibtPago_Click(object sender, EventArgs e)
         {
-            var formPago = new FormPago();
+            if (!_detallesTemp.Any())
+            {
+                MessageBox.Show("Debe agregar al menos un producto antes de pagar.");
+                return;
+            }
+
+            var formPago = new FormPago(
+                    Convert.ToDecimal(txtTotalaPagar.Text),
+                    _detallesTemp,
+                    _clienteId,
+                    _empresaId,
+                    _usuarioId, _apiClient
+                );
             formPago.ShowDialog();
         }
 

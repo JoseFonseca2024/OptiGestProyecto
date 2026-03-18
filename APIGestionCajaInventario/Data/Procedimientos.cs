@@ -46,5 +46,9 @@
 
         //Turnos
         public const string SP_ABRIR_TURNO = "sp_abrir_turno";
+        public const string SP_OBTENER_TURNO_ACTIVO = "SP_OBTENER_TURNO_ACTIVO";
+
+        //Documetnos
+        public const string SP_REGISTRARDOCUMENTO = "sp_RegistrarDocumento";
     }
 }

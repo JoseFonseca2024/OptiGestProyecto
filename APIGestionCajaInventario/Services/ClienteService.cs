@@ -4,6 +4,7 @@ using APIGestionCajaInventario.Dto.Clientes;
 using APIGestionCajaInventario.Models;
 using System.Security.Claims;
 using APIGestionCajaInventario.Services.Interfaces;
+using AutoMapper;
 
 namespace APIGestionCajaInventario.Services
 {
@@ -18,7 +19,13 @@ namespace APIGestionCajaInventario.Services
             _usuarioDAO = usuarioDAO;
         }
 
-        public async Task<IEnumerable<ClienteDto>> ObtenerPorEmpresaAsync(ClaimsPrincipal user)
+        public List<ClienteDto> ObtenerClientesDto(IMapper _mapper, IEnumerable<Cliente> clientes)
+        {
+            var dto = _mapper.Map<List<ClienteDto>>(clientes);
+            return dto;
+        }
+
+        public async Task<IEnumerable<Cliente>> ObtenerPorEmpresaAsync(ClaimsPrincipal user)
         {
             var usuarioIdClaim = user.FindFirst(ClaimTypes.NameIdentifier);
             if (usuarioIdClaim == null)
@@ -31,12 +38,7 @@ namespace APIGestionCajaInventario.Services
 
             var clientes = await _repository.GetAllPorEmpresaAsync(empresa.EmpresaID);
 
-            return clientes.Select(c => new ClienteDto
-            {
-                ClienteID = c.ClienteID,
-                NombreCliente = c.NombreCliente,
-                TelefonoCliente = c.TelefonoCliente
-            });
+            return clientes;
         }
 
         public async Task<ClienteDto?> ObtenerPorIdAsync(int id, ClaimsPrincipal user)

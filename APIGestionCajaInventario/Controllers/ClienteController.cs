@@ -1,4 +1,5 @@
-﻿using APIGestionCajaInventario.Dto.Clientes;
+﻿using APIGestionCajaInventario.Dto;
+using APIGestionCajaInventario.Dto.Clientes;
 using APIGestionCajaInventario.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -22,10 +23,45 @@ namespace APIGestionCajaInventario.Controllers
 
         [Authorize(Roles = "Administrador,Cajero")]
         [HttpGet("por-empresa")]
-        public async Task<ActionResult<IEnumerable<ClienteDto>>> GetAll()
+        public async Task<ActionResult> GetAll()
         {
-            var clientes = await _clienteService.ObtenerPorEmpresaAsync(User);
-            return Ok(clientes);
+            try
+            {
+                var clientes = await _clienteService.ObtenerPorEmpresaAsync(User);
+                var clientesDto = _clienteService.ObtenerClientesDto(_mapper, clientes);
+
+                var response = new ApiResponse<List<ClienteDto>>
+                {
+                    Error = false,
+                    Message = "Clientes de la empresa obtenidos correctamente.",
+                    Data = clientesDto.ToList()
+                };
+
+                return StatusCode(StatusCodes.Status200OK, response);
+
+            }
+            catch (UnauthorizedAccessException e)
+            {
+                var response = new ApiResponse<List<ClienteDto>>
+                {
+                    Error = true,
+                    Message = e.Message,
+                    Data = null
+                };
+
+                return StatusCode(StatusCodes.Status403Forbidden, response);
+            }
+            catch (InvalidOperationException e)
+            {
+                var response = new ApiResponse<List<ClienteDto>>
+                {
+                    Error = true,
+                    Message = e.Message,
+                    Data = null
+                };
+
+                return StatusCode(StatusCodes.Status404NotFound, response);
+            }
         }
 
         [Authorize(Roles = "Administrador,Cajero")]

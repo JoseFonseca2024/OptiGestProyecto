@@ -3,6 +3,7 @@ using APIGestionCajaInventario.DAO;
 using APIGestionCajaInventario.Dto.Cajas;
 using APIGestionCajaInventario.Models;
 using System.Security.Claims;
+using AutoMapper;
 
 namespace APIGestionCajaInventario.Services
 {
@@ -15,6 +16,12 @@ namespace APIGestionCajaInventario.Services
         {
             _repository = repository;
             _usuarioDAO = usuarioDAO;
+        }
+
+        public List<CajaDto> ObtenerCajasDto(IMapper _mapper, IEnumerable<Cajas> cajas)
+        {
+            var dto = _mapper.Map<List<CajaDto>>(cajas);
+            return dto;
         }
 
         public async Task<IEnumerable<Cajas>> ObtenerCajasPorEmpresaAsync(ClaimsPrincipal user)

@@ -58,6 +58,9 @@ builder.Services.AddScoped<TurnoDAO>();
 builder.Services.AddScoped<TurnoService>();
 builder.Services.AddScoped<ReporteDAO>();
 builder.Services.AddScoped<ReporteService>();
+builder.Services.AddScoped<DocumentosDAO>();
+builder.Services.AddScoped<DocumentoService>();
+
 
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));

@@ -30,7 +30,8 @@ namespace AppGestionCajaInventario.Forms.FormProductos
 
         private async void FormProductos_Load(object sender, EventArgs e)
         {
-            await formService.CargarProductos(_productoRepository, dgvProductos);
+            var success = await formService.CargarProductos(_productoRepository, dgvProductos);
+            if (!success) this.Close();
         }
 
         private async void ibtnRegistrar_Click(object sender, EventArgs e)

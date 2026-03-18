@@ -9,6 +9,7 @@ using AppGestionCajaInventario.Forms.FormsEmpresa;
 using AppGestionCajaInventario.Forms.FormsEntidadesExternas;
 using AppGestionCajaInventario.Forms.FormsUsuario;
 using AppGestionCajaInventario.Forms.FormTurnos;
+using AppGestionCajaInventario.Models.Dto;
 using AppGestionCajaInventario.Models.Repository;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
 
@@ -25,8 +26,10 @@ namespace AppGestionCajaInventario
         private readonly CajasRepository _cajasRepository;
         private readonly TurnoRepository _turnoRepository;
         private readonly ReporteRepository _reporteRepository;
+        private readonly UserRepository _userRepository;
+        public LoginResponse LoginResponse { get; }
 
-        public MainForm(ApiClient apiClient, string rol, string token)
+        public MainForm(ApiClient apiClient, string rol, string token, LoginResponse loginResponse)
         {
             InitializeComponent();
 
@@ -40,7 +43,9 @@ namespace AppGestionCajaInventario
             _cajasRepository = new CajasRepository(_apiClient.HttpClientInstance);
             _turnoRepository = new TurnoRepository(_apiClient.HttpClientInstance);
             _reporteRepository = new ReporteRepository(_apiClient.HttpClientInstance);
+            _userRepository = new UserRepository(_apiClient.HttpClientInstance, "Auth/login");
 
+            LoginResponse = loginResponse;
 
             timerFechayHora.Start();
             _formService.ConfigurarMenuPorRol(rol, imiEmpresas, imiUsuarios, imiCajas, imiOperaciones);
@@ -111,9 +116,17 @@ namespace AppGestionCajaInventario
 
         private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new FormFacturación(_adminRepository, _clienteRepository, _productoRepository);
+            var form = new FormFacturación(
+                _adminRepository,
+                _clienteRepository,
+                _productoRepository,
+                _apiClient,
+                _userRepository,
+                LoginResponse   
+            );
             _formService.MostrarFormenPanel(form, panel1);
         }
+
 
         private void toolStripMenuItem12_Click(object sender, EventArgs e)
         {

@@ -52,6 +52,7 @@ namespace APIGestionCajaInventario.Controllers
             var response = new LoginResponse
             {
                 Token = token,
+                UsuarioID = usuario.UsuarioID,
                 Usuario = usuario.NombreUsuario,
                 Rol = usuario.Rol,
                 Expiracion = DateTime.UtcNow.AddHours(1)

@@ -1,8 +1,10 @@
 ﻿using AppGestionCajaInventario.Models.Dto.Turnos;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -20,7 +22,7 @@ namespace AppGestionCajaInventario.Models.Repository
 
         public async Task<int?> AbrirAsync(TurnoCreateDto dto)
         {
-            var json = JsonSerializer.Serialize(dto);
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(dto);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var response = await _http.PostAsync("Turnos/abrir", content);
@@ -33,28 +35,14 @@ namespace AppGestionCajaInventario.Models.Repository
             else
             {
                 var errorJson = await response.Content.ReadAsStringAsync();
-                try
-                {
-                    using var doc = JsonDocument.Parse(errorJson);
-                    var root = doc.RootElement;
+                var root = Newtonsoft.Json.Linq.JObject.Parse(errorJson);
 
-                    if (root.TryGetProperty("detail", out var detailProp))
-                    {
-                        throw new Exception(detailProp.GetString());
-                    }
-                    else if (root.TryGetProperty("message", out var msgProp))
-                    {
-                        throw new Exception(msgProp.GetString());
-                    }
-                    else
-                    {
-                        throw new Exception("Error desconocido en la API.");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception($"Error: {ex.Message}");
-                }
+                if (root.TryGetValue("detail", out var detailProp))
+                    throw new Exception(detailProp.ToString());
+                else if (root.TryGetValue("message", out var msgProp))
+                    throw new Exception(msgProp.ToString());
+                else
+                    throw new Exception("Error desconocido en la API.");
             }
         }
 
@@ -64,11 +52,17 @@ namespace AppGestionCajaInventario.Models.Repository
             if (!response.IsSuccessStatusCode) return new List<TurnosDto>();
 
             var json = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<List<TurnosDto>>(json, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            }) ?? new List<TurnosDto>();
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<List<TurnosDto>>(json)
+                   ?? new List<TurnosDto>();
         }
 
+        public async Task<TurnosDto?> ObtenerTurnoActivoAsync()
+        {
+            var response = await _http.GetAsync("Turnos/activo");
+            if (!response.IsSuccessStatusCode) return null;
+
+            var json = await response.Content.ReadAsStringAsync();
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<TurnosDto>(json);
+        }
     }
 }
