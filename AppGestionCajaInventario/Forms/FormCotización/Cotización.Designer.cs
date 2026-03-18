@@ -36,7 +36,7 @@
             dgtvDetallesFactura = new DataGridView();
             gpbProducto = new GroupBox();
             ibtnEliminar = new FontAwesome.Sharp.IconButton();
-            numericUpDown1 = new NumericUpDown();
+            numCantidad = new NumericUpDown();
             ibtnEditar = new FontAwesome.Sharp.IconButton();
             ibtnBuscarProducto = new FontAwesome.Sharp.IconButton();
             ibtnAgregar = new FontAwesome.Sharp.IconButton();
@@ -69,7 +69,7 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgtvDetallesFactura).BeginInit();
             gpbProducto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numCantidad).BeginInit();
             gpbInformación.SuspendLayout();
             gpbCliente.SuspendLayout();
             SuspendLayout();
@@ -148,13 +148,15 @@
             dgtvDetallesFactura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgtvDetallesFactura.Location = new Point(94, 353);
             dgtvDetallesFactura.Name = "dgtvDetallesFactura";
+            dgtvDetallesFactura.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgtvDetallesFactura.Size = new Size(634, 251);
             dgtvDetallesFactura.TabIndex = 4;
+            dgtvDetallesFactura.CellClick += dgtvDetallesFactura_CellClick;
             // 
             // gpbProducto
             // 
             gpbProducto.Controls.Add(ibtnEliminar);
-            gpbProducto.Controls.Add(numericUpDown1);
+            gpbProducto.Controls.Add(numCantidad);
             gpbProducto.Controls.Add(ibtnEditar);
             gpbProducto.Controls.Add(ibtnBuscarProducto);
             gpbProducto.Controls.Add(ibtnAgregar);
@@ -193,16 +195,17 @@
             ibtnEliminar.Text = "Eliminar";
             ibtnEliminar.TextImageRelation = TextImageRelation.ImageBeforeText;
             ibtnEliminar.UseVisualStyleBackColor = false;
+            ibtnEliminar.Click += ibtnEliminar_Click;
             // 
-            // numericUpDown1
+            // numCantidad
             // 
-            numericUpDown1.Font = new Font("Segoe UI", 11.25F);
-            numericUpDown1.Location = new Point(521, 56);
-            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(58, 27);
-            numericUpDown1.TabIndex = 19;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            numCantidad.Font = new Font("Segoe UI", 11.25F);
+            numCantidad.Location = new Point(521, 56);
+            numCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numCantidad.Name = "numCantidad";
+            numCantidad.Size = new Size(58, 27);
+            numCantidad.TabIndex = 19;
+            numCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // ibtnEditar
             // 
@@ -221,6 +224,7 @@
             ibtnEditar.Text = "Editar";
             ibtnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
             ibtnEditar.UseVisualStyleBackColor = false;
+            ibtnEditar.Click += ibtnEditar_Click;
             // 
             // ibtnBuscarProducto
             // 
@@ -252,6 +256,7 @@
             ibtnAgregar.Text = "Agregar";
             ibtnAgregar.TextImageRelation = TextImageRelation.ImageBeforeText;
             ibtnAgregar.UseVisualStyleBackColor = false;
+            ibtnAgregar.Click += ibtnAgregar_Click;
             // 
             // txtDescuento
             // 
@@ -524,7 +529,7 @@
             ((System.ComponentModel.ISupportInitialize)dgtvDetallesFactura).EndInit();
             gpbProducto.ResumeLayout(false);
             gpbProducto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numCantidad).EndInit();
             gpbInformación.ResumeLayout(false);
             gpbInformación.PerformLayout();
             gpbCliente.ResumeLayout(false);
@@ -542,7 +547,7 @@
         private DataGridView dgtvDetallesFactura;
         private GroupBox gpbProducto;
         private FontAwesome.Sharp.IconButton ibtnEliminar;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numCantidad;
         private FontAwesome.Sharp.IconButton ibtnEditar;
         private FontAwesome.Sharp.IconButton ibtnBuscarProducto;
         private FontAwesome.Sharp.IconButton ibtnAgregar;

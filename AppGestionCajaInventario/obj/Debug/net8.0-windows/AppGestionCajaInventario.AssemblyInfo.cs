@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppGestionCajaInventario")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c52f9d68dce5cc169daef6b5b9ecaf5b1c06a559")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7201cd02488425e8fd11337f703e4cb85549fef9")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppGestionCajaInventario")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppGestionCajaInventario")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

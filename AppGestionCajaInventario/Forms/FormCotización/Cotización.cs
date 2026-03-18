@@ -1,4 +1,7 @@
-﻿using AppGestionCajaInventario.Forms.FormsEntidadesExternas;
+﻿using AppGestionCajaInventario.Class;
+using AppGestionCajaInventario.Forms.FormsEntidadesExternas;
+using AppGestionCajaInventario.Models.Dto.Facturas;
+using AppGestionCajaInventario.Models.Dto.Productos;
 using AppGestionCajaInventario.Models.Repository;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
 using System;
@@ -18,6 +21,13 @@ namespace AppGestionCajaInventario.Forms.FormCotización
         private readonly ClienteRepository _clienteRepository;
         private readonly ProductoRepository _productoRepository;
         private readonly IAdminRepository _adminRepository;
+
+        private readonly FormService formService = new FormService();
+
+        private ProductosDto _productoSeleccionado = new ProductosDto();
+
+        private readonly List<DetalleDocumentoTempDto> _detallesTemp = new();
+
 
         public Cotización(IAdminRepository adminRepository, ClienteRepository clienteRepository, ProductoRepository productoRepository)
         {
@@ -45,6 +55,7 @@ namespace AppGestionCajaInventario.Forms.FormCotización
             var formProductos = new FormProductos.FormProductos(_productoRepository);
             formProductos.ProductoSeleccionado += producto =>
             {
+                _productoSeleccionado = producto;
                 txtCodigoProducto.Text = producto.CodigoProducto;
                 txtNombreProducto.Text = producto.NombreProducto;
                 txtPrecio.Text = producto.PrecioUnitario.ToString();
@@ -65,6 +76,137 @@ namespace AppGestionCajaInventario.Forms.FormCotización
             {
                 txtRUC.Clear();
             }
+        }
+
+
+        private void ibtnAgregar_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtPrecio.Text) || String.IsNullOrEmpty(txtDescuento.Text))
+            {
+                MessageBox.Show("No puede ingresar un precio ni porcentaje de descuento vacio. Por favor rellene todos los campos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (numCantidad.Value <= 0)
+            {
+                MessageBox.Show("Ingrese una cantidad valida para la facturación", "Cantidad Invalida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var detalle = new DetalleDocumentoTempDto
+            {
+                ProductoID = _productoSeleccionado.ProductoID,
+                CodigoProducto = txtCodigoProducto.Text,
+                NombreProducto = txtNombreProducto.Text,
+                Cantidad = (int)numCantidad.Value,
+                PrecioUnitario = decimal.Parse(txtPrecio.Text),
+                PorcentajeDescuento = decimal.Parse(txtDescuento.Text)
+            };
+
+            _detallesTemp.Add(detalle);
+
+            LimpiarCampos();
+
+            dgtvDetallesFactura.DataSource = null;
+            dgtvDetallesFactura.DataSource = _detallesTemp;
+
+            formService.CalculodeTotales(_detallesTemp, 0.15m, txtSubtotal, txtIVA, txtTotalaPagar);
+        }
+
+        private async void dgtvDetallesFactura_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var productoSeleccionado = (DetalleDocumentoTempDto)dgtvDetallesFactura.Rows[e.RowIndex].DataBoundItem;
+                txtCodigoProducto.Text = productoSeleccionado.CodigoProducto.ToString();
+                txtNombreProducto.Text = productoSeleccionado.NombreProducto.ToString();
+                numCantidad.Value = Convert.ToInt64(productoSeleccionado.Cantidad);
+                txtPrecio.Text = productoSeleccionado.PrecioUnitario.ToString();
+                txtDescuento.Text = productoSeleccionado.PorcentajeDescuento.ToString();
+
+                // Consultar stock en BD
+                var producto = await _productoRepository.ObtenerPorIdAsync(productoSeleccionado.ProductoID);
+                if (producto != null)
+                {
+                    txtStock.Text = producto.StockActual.ToString();
+                }
+            }
+        }
+
+        private void LimpiarCampos()
+        {
+            txtCodigoProducto.Clear();
+            txtNombreProducto.Clear();
+            txtPrecio.Clear();
+            txtStock.Clear();
+            txtDescuento.Clear();
+            numCantidad.Value = 1;
+        }
+
+        private void ibtnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgtvDetallesFactura.CurrentRow?.DataBoundItem is not DetalleDocumentoTempDto productoSeleccionado)
+            {
+                MessageBox.Show("Seleccione el producto a modificar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (String.IsNullOrEmpty(txtPrecio.Text) || String.IsNullOrEmpty(txtDescuento.Text))
+            {
+                MessageBox.Show("No puede ingresar un precio ni porcentaje de descuento vacio. Por favor rellene todos los campos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (numCantidad.Value <= 0)
+            {
+                MessageBox.Show("Ingrese una cantidad valida para la facturación", "Cantidad Invalida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var Confirmación = MessageBox.Show("¿Desea confirmar la actualización?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (Confirmación == DialogResult.No) return;
+
+            productoSeleccionado.Cantidad = (int)numCantidad.Value;
+            productoSeleccionado.PrecioUnitario = decimal.Parse(txtPrecio.Text);
+            productoSeleccionado.PorcentajeDescuento = decimal.Parse(txtDescuento.Text);
+
+            LimpiarCampos();
+
+            dgtvDetallesFactura.DataSource = null;
+            dgtvDetallesFactura.DataSource = _detallesTemp;
+
+            formService.CalculodeTotales(_detallesTemp, 0.15m, txtSubtotal, txtIVA, txtTotalaPagar);
+
+            MessageBox.Show("Producto actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void ibtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgtvDetallesFactura.CurrentRow?.DataBoundItem is not DetalleDocumentoTempDto productoSeleccionado)
+            {
+                MessageBox.Show("Seleccione el producto a eliminar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var confirmacion = MessageBox.Show(
+                               $"¿Desea eliminar el producto {productoSeleccionado.NombreProducto} de la factura?",
+                                "Confirmación",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question);
+
+            if (confirmacion == DialogResult.No) return;
+
+            _detallesTemp.Remove(productoSeleccionado);
+
+            dgtvDetallesFactura.DataSource = null;
+            dgtvDetallesFactura.DataSource = _detallesTemp;
+
+            formService.CalculodeTotales(_detallesTemp, 0.15m, txtSubtotal, txtIVA, txtTotalaPagar);
+
+            MessageBox.Show("Producto eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

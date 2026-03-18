@@ -3,6 +3,7 @@ using AppGestionCajaInventario.Forms.FormsLogins;
 using AppGestionCajaInventario.Models.Dto.Cajas;
 using AppGestionCajaInventario.Models.Dto.Clientes;
 using AppGestionCajaInventario.Models.Dto.Empresas;
+using AppGestionCajaInventario.Models.Dto.Facturas;
 using AppGestionCajaInventario.Models.Dto.Productos;
 using AppGestionCajaInventario.Models.Dto.Proveedores;
 using AppGestionCajaInventario.Models.Dto.Turnos;
@@ -531,6 +532,19 @@ namespace AppGestionCajaInventario.Class
                 totalAcumulado += dinero;
                 txt.Text = totalAcumulado.ToString("N2");
             };
+        }
+
+        public void CalculodeTotales (IEnumerable<DetalleDocumentoTempDto> detalles, decimal tasaIVA,
+                                TextBox txtSubtotal, TextBox txtIVA, TextBox txtTotal)
+        {
+            decimal total = detalles.Sum(d => d.TotalLinea);
+
+            decimal subtotal = total / (1 + tasaIVA);
+            decimal iva = total - subtotal;
+
+            txtSubtotal.Text = subtotal.ToString("N2");
+            txtIVA.Text = iva.ToString("N2");
+            txtTotal.Text = total.ToString("N2");
         }
     }
 }
