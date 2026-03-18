@@ -494,7 +494,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -515,6 +515,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -541,7 +545,7 @@
               "RelativeDocumentMoniker": "AppGestionCajaInventario\\Forms\\FormCotizaci\u00F3n\\Cotizaci\u00F3n.cs",
               "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormCotizaci\u00F3n\\Cotizaci\u00F3n.cs",
               "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormCotizaci\u00F3n\\Cotizaci\u00F3n.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T04:16:48.125Z",
               "EditorCaption": ""
@@ -555,8 +559,7 @@
               "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormFacturaci\u00F3n\\FormFacturaci\u00F3n.cs [Dise\u00F1o]",
               "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormFacturaci\u00F3n\\FormFacturaci\u00F3n.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T05:05:49.658Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-03-11T05:05:49.658Z"
             },
             {
               "$type": "Document",
@@ -567,8 +570,7 @@
               "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormCotizaci\u00F3n\\Cotizaci\u00F3n.cs [Dise\u00F1o]",
               "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormCotizaci\u00F3n\\Cotizaci\u00F3n.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T04:07:45.159Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-03-17T04:07:45.159Z"
             },
             {
               "$type": "Document",
@@ -580,8 +582,7 @@
               "RelativeToolTip": "AppGestionCajaInventario\\Class\\FormService.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAD4v3QAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T21:45:13.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T21:45:13.902Z"
             },
             {
               "$type": "Document",
@@ -619,8 +620,7 @@
               "RelativeToolTip": "APIGestionCajaInventario\\DAO\\EmpresaDAO.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwBYAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T00:50:01.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T00:50:01.577Z"
             },
             {
               "$type": "Document",
@@ -632,8 +632,7 @@
               "RelativeToolTip": "AppGestionCajaInventario\\Models\\Repository\\AdminRepository.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAiwBoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T14:43:29.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T14:43:29.976Z"
             },
             {
               "$type": "Document",
@@ -645,8 +644,7 @@
               "RelativeToolTip": "APIGestionCajaInventario\\Services\\EmpresaService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAD4vxcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T06:56:54.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T06:56:54.512Z"
             },
             {
               "$type": "Document",
@@ -658,8 +656,7 @@
               "RelativeToolTip": "AppGestionCajaInventario\\Models\\Repository\\Interfaces\\IAdminRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T00:48:20.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T00:48:20.124Z"
             },
             {
               "$type": "Document",
@@ -763,8 +760,7 @@
               "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormFacturaci\u00F3n\\FormFacturaci\u00F3n.Designer.cs",
               "ViewState": "AgIAACYCAAAAAAAAAAArwDgCAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T05:05:53.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T05:05:53.381Z"
             },
             {
               "$type": "Document",
@@ -1493,8 +1489,7 @@
               "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\IISemestre\\BasedeDatosI\\OptiGest_Proyecto\\AppGestionCajaInventario\\Forms\\FormsEntidadesExternas\\FormProveedores.cs [Dise\u00F1o]",
               "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsEntidadesExternas\\FormProveedores.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:49:47.582Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-11-25T17:49:47.582Z"
             },
             {
               "$type": "Document",
@@ -1506,8 +1501,7 @@
               "RelativeToolTip": "AppGestionCajaInventario\\Forms\\FormsEntidadesExternas\\FormProveedores.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:49:52.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T17:49:52.235Z"
             },
             {
               "$type": "Document",
@@ -1651,8 +1645,7 @@
               "RelativeToolTip": "AppGestionCajaInventario\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-11-23T14:44:17.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T14:44:17.172Z"
             },
             {
               "$type": "Document",
