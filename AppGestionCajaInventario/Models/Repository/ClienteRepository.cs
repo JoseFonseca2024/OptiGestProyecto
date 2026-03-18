@@ -1,5 +1,7 @@
-﻿using AppGestionCajaInventario.Models.Dto.Clientes;
+﻿using AppGestionCajaInventario.Models.Dto;
+using AppGestionCajaInventario.Models.Dto.Clientes;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
+using DocumentFormat.OpenXml.Features;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,16 +20,18 @@ namespace AppGestionCajaInventario.Models.Repository
             _http = http;
         }
 
-        public async Task<IEnumerable<ClienteDto?>> ObtenerClientesPorEmpresaAsync()
+        public async Task<ApiResponse<List<ClienteDto>>> ObtenerClientesPorEmpresaAsync()
         {
             var response = await _http.GetAsync("Cliente/por-empresa");
-            response.EnsureSuccessStatusCode();
 
             var json = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<List<ClienteDto>>(json, new JsonSerializerOptions
+
+            var apiResponse = JsonSerializer.Deserialize<ApiResponse<List<ClienteDto>>>(json, new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
-            }) ?? new List<ClienteDto>();
+            });
+
+            return apiResponse!;
         }
 
         public async Task<ClienteDto?> ObtenerPorIdAsync(int id)

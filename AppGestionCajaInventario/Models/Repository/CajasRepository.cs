@@ -1,4 +1,5 @@
-﻿using AppGestionCajaInventario.Models.Dto.Cajas;
+﻿using AppGestionCajaInventario.Models.Dto;
+using AppGestionCajaInventario.Models.Dto.Cajas;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -18,16 +19,18 @@ namespace AppGestionCajaInventario.Models.Repository
             _http = http;
         }
 
-        public async Task<List<CajasDto>> ObtenerCajasporEmpresaAsync()
+        public async Task<ApiResponse<List<CajasDto>>> ObtenerCajasporEmpresaAsync()
         {
             var response = await _http.GetAsync("Cajas/por-empresa");
-            response.EnsureSuccessStatusCode();
 
             var json = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<List<CajasDto>>(json, new JsonSerializerOptions
+
+            var apiResponse = JsonSerializer.Deserialize<ApiResponse<List<CajasDto>>>(json, new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
-            }) ?? new List<CajasDto>();
+            });
+
+            return apiResponse!;
         }
 
         public async Task<CajasDto?> ObtenerPorIdAsync(int id)

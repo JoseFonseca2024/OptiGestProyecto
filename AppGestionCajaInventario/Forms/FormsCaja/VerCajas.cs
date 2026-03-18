@@ -26,7 +26,8 @@ namespace AppGestionCajaInventario.Forms.FormsCaja
 
         private async void FormRegistroCajas_Load(object sender, EventArgs e)
         {
-            await formService.CargarCajasporEmpresasAsync(_cajaRepository, dgvCajas);
+            var success = await formService.CargarCajasporEmpresasAsync(_cajaRepository, dgvCajas);
+            if (!success) this.Close();
         }
 
         private void dgvCajas_CellClick(object sender, DataGridViewCellEventArgs e)

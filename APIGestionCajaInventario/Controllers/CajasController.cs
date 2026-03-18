@@ -1,4 +1,6 @@
-﻿using APIGestionCajaInventario.Dto.Cajas;
+﻿using APIGestionCajaInventario.Dto;
+using APIGestionCajaInventario.Dto.Cajas;
+using APIGestionCajaInventario.Models;
 using APIGestionCajaInventario.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -24,11 +26,44 @@ namespace APIGestionCajaInventario.Controllers
         // Listar todas las cajas de la empresa del usuario
         [Authorize(Roles = "Administrador,Cajero")]
         [HttpGet("por-empresa")]
-        public async Task<ActionResult<IEnumerable<CajaDto>>> GetAll()
+        public async Task<ActionResult> GetAll()
         {
-            var cajas = await _service.ObtenerCajasPorEmpresaAsync(User);
-            var dto = _mapper.Map<List<CajaDto>>(cajas);
-            return Ok(dto);
+            try
+            {
+                var cajas = await _service.ObtenerCajasPorEmpresaAsync(User);
+                var cajasDto = _service.ObtenerCajasDto(_mapper, cajas);
+
+                var response = new ApiResponse<List<CajaDto>>
+                {
+                    Error = false,
+                    Message = "Cajas de la empresa obtenidos correctamente.",
+                    Data = cajasDto.ToList()
+                };
+
+                return StatusCode(StatusCodes.Status200OK, response);
+
+            } catch (UnauthorizedAccessException e)
+            {
+                var response = new ApiResponse<List<CajaDto>>
+                {
+                    Error = true,
+                    Message = e.Message,
+                    Data = null
+                };
+
+                return StatusCode(StatusCodes.Status403Forbidden, response);
+
+            } catch (InvalidOperationException e)
+            {
+                var response = new ApiResponse<List<CajaDto>>
+                {
+                    Error = true,
+                    Message = e.Message,
+                    Data = null
+                };
+
+                return StatusCode(StatusCodes.Status404NotFound, response);
+            }
         }
 
         // Obtener caja por ID

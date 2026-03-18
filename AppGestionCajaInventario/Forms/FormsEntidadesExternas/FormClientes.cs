@@ -52,7 +52,8 @@ namespace AppGestionCajaInventario.Forms.FormsEntidadesExternas
 
         private async void FormClientes_Load(object sender, EventArgs e)
         {
-            await formService.CargarClientesAsync(_clienteRepository, dgvCliente);
+            var success = await formService.CargarClientesAsync(_clienteRepository, dgvCliente);
+            if (!success) this.Close();
         }
 
         private async void ibtnEditar_Click(object sender, EventArgs e)

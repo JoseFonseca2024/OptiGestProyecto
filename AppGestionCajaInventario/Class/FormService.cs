@@ -14,6 +14,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
@@ -424,10 +425,25 @@ namespace AppGestionCajaInventario.Class
             }
         }
 
-        public async Task CargarProductos(IProductoRepository _productoRepository, DataGridView dgvProductos)
+        public async Task<bool> CargarProductos(IProductoRepository _productoRepository, DataGridView dgvProductos)
         {
-            var productos = await _productoRepository.ObtenerProductosPorEmpresaAsync();
-            dgvProductos.DataSource = productos;
+            var response = await _productoRepository.ObtenerProductosPorEmpresaAsync();
+
+            if (!response.Error)
+            {
+                dgvProductos.DataSource = response.Data!;
+                return true;
+
+            } else
+            {
+                MessageBox.Show(
+                    $"Error al cargar productos: {response.Message}",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return false;
+            }
         }
 
         public async Task<bool> AgregarProductoAsync(IProductoRepository productoRepository, ProductosCreateDto productosDto)
@@ -445,10 +461,25 @@ namespace AppGestionCajaInventario.Class
             return await productoRepository.EliminarAsync(id);
         }
 
-        public async Task CargarClientesAsync(IClienteRepository clienteRepository, DataGridView dgvClientes)
+        public async Task<bool> CargarClientesAsync(IClienteRepository clienteRepository, DataGridView dgvClientes)
         {
-            var clientes = await clienteRepository.ObtenerClientesPorEmpresaAsync();
-            dgvClientes.DataSource = clientes;
+            var response = await clienteRepository.ObtenerClientesPorEmpresaAsync();
+
+            if (!response.Error)
+            {
+                dgvClientes.DataSource = response.Data;
+                Console.WriteLine(response.Message);
+                return true;
+
+            } else {
+                MessageBox.Show(
+                    $"Error al cargar clientes: {response.Message}",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return false;
+            }
         }
 
         public async Task<bool> RegistrarClienteAsync(IClienteRepository clienteRepository, ClienteCreateDto dto)
@@ -466,10 +497,25 @@ namespace AppGestionCajaInventario.Class
             return await clienteRepository.EliminarAsync(id);
         }
 
-        public async Task CargarProveedoresAsync(IProveedorRepository proveedorRepository, DataGridView dgvProveedores)
+        public async Task<bool> CargarProveedoresAsync(IProveedorRepository proveedorRepository, DataGridView dgvProveedores)
         {
-            var proveedores = await proveedorRepository.GetAllPorEmpresaAsync();
-            dgvProveedores.DataSource = proveedores;
+            var response = await proveedorRepository.GetAllPorEmpresaAsync();
+            
+            if (!response.Error)
+            {
+                dgvProveedores.DataSource = response.Message!;
+                return true;
+
+            } else
+            {
+                MessageBox.Show(
+                    $"Error al cargar proveedores: {response.Message}",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return false;
+            }
         }
 
         public async Task<bool> RegistrarProveedorAsync(IProveedorRepository proveedorRepository, ProveedorCreateDto dto)
@@ -487,10 +533,25 @@ namespace AppGestionCajaInventario.Class
             return await proveedorRepository.EliminarAsync(id);
         }
 
-        public async Task CargarCajasporEmpresasAsync(ICajaRepository cajaRepository, DataGridView dgvCajas)
+        public async Task<bool> CargarCajasporEmpresasAsync(ICajaRepository cajaRepository, DataGridView dgvCajas)
         {
-            var cajas = await cajaRepository.ObtenerCajasporEmpresaAsync();
-            dgvCajas.DataSource = cajas;
+            var response = await cajaRepository.ObtenerCajasporEmpresaAsync();
+
+            if (!response.Error)
+            {
+                dgvCajas.DataSource = response.Data!;
+                return true;
+
+            } else
+            {
+                MessageBox.Show(
+                    $"Error al cargar cajas: {response.Message}",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return false;
+            }
         }
 
         public async Task<bool> RegistrarCajaAsync (ICajaRepository cajaRepository, CajaCreateDto dto)
