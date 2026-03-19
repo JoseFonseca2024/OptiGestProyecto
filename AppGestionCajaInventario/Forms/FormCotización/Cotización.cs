@@ -1,5 +1,7 @@
 ﻿using AppGestionCajaInventario.Class;
+using AppGestionCajaInventario.Controllers;
 using AppGestionCajaInventario.Forms.FormsEntidadesExternas;
+using AppGestionCajaInventario.Models.Dto;
 using AppGestionCajaInventario.Models.Dto.Facturas;
 using AppGestionCajaInventario.Models.Dto.Productos;
 using AppGestionCajaInventario.Models.Repository;
@@ -21,6 +23,10 @@ namespace AppGestionCajaInventario.Forms.FormCotización
         private readonly ClienteRepository _clienteRepository;
         private readonly ProductoRepository _productoRepository;
         private readonly IAdminRepository _adminRepository;
+        private readonly ApiClient _apiClient;
+        private readonly LoginResponse _loginResponse;
+        private int _usuarioId;
+        private int _clienteId;
 
         private readonly FormService formService = new FormService();
 
@@ -29,12 +35,14 @@ namespace AppGestionCajaInventario.Forms.FormCotización
         private readonly List<DetalleDocumentoTempDto> _detallesTemp = new();
 
 
-        public Cotización(IAdminRepository adminRepository, ClienteRepository clienteRepository, ProductoRepository productoRepository)
+        public Cotización(IAdminRepository adminRepository, ClienteRepository clienteRepository, ProductoRepository productoRepository, ApiClient apiClient, LoginResponse loginResponse)
         {
             InitializeComponent();
             _adminRepository = adminRepository ?? throw new ArgumentNullException(nameof(adminRepository));
             _clienteRepository = clienteRepository;
             _productoRepository = productoRepository;
+            _apiClient = apiClient;
+            _loginResponse = loginResponse;
         }
 
         private void ibtnBuscarCliente_Click(object sender, EventArgs e)
@@ -45,6 +53,7 @@ namespace AppGestionCajaInventario.Forms.FormCotización
             {
                 txtNombreCliente.Text = cliente.NombreCliente;
                 msktxtNumero.Text = cliente.TelefonoCliente;
+                _clienteId = cliente.ClienteID;
             };
 
             formCLientes.ShowDialog();
@@ -66,6 +75,7 @@ namespace AppGestionCajaInventario.Forms.FormCotización
 
         private async void Cotización_Load(object sender, EventArgs e)
         {
+            _usuarioId = _loginResponse.UsuarioID;
             var empresa = await _adminRepository.ObtenerEmpresaDelUsuarioAsync();
 
             if (empresa != null)
@@ -207,6 +217,50 @@ namespace AppGestionCajaInventario.Forms.FormCotización
 
             MessageBox.Show("Producto eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private async void ibtnGenerarCotización_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!_detallesTemp.Any())
+                {
+                    MessageBox.Show("Debe agregar al menos un producto a la cotización.", "Sin producto",MessageBoxButtons.OK, MessageBoxIcon.None);
+                    return;
+                }
+
+                if (_clienteId <= 0)
+                {
+                    MessageBox.Show("Debe seleccionar un cliente a la cotización.", "Sin cliente", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    return;
+                }
+
+                var response = await formService.RegistrarCotizacionAsync(
+                    _apiClient,
+                    _detallesTemp,
+                    _clienteId,
+                    _usuarioId
+                );
+
+                if (response != null)
+                {
+                    var pdfService = new DocumentoPDFService();
+
+                    string ruta = Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                        $"Cotizacion_{response.NumeroDocumento}.pdf"
+                    );
+
+                    pdfService.GenerarDocumentoPdf(response, ruta);
+
+                    MessageBox.Show("Cotización generada correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    formService.LimpiarFormularioDocumento(txtNombreCliente, msktxtNumero, txtSubtotal, txtIVA, txtTotalaPagar, txtCodigoProducto, txtNombreProducto, txtPrecio, txtStock, txtDescuento, numCantidad, dgtvDetallesFactura, _detallesTemp, ref _clienteId);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
         }
     }
 }

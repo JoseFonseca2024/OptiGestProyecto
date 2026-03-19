@@ -2,7 +2,6 @@
 {
     public class DocumentoRequestDto
     {
-        public int EmpresaID { get; set; }
         public int TipoDocumentoID { get; set; }
         public int TurnoID { get; set; }
         public int UsuarioID { get; set; }

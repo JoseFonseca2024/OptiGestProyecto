@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            ibtPago = new FontAwesome.Sharp.IconButton();
+            ibtnGenerarCotización = new FontAwesome.Sharp.IconButton();
             lblTotal = new Label();
             lblIVA = new Label();
             lblSubTotal = new Label();
@@ -79,7 +79,7 @@
             panel1.Anchor = AnchorStyles.None;
             panel1.AutoScroll = true;
             panel1.BackColor = Color.WhiteSmoke;
-            panel1.Controls.Add(ibtPago);
+            panel1.Controls.Add(ibtnGenerarCotización);
             panel1.Controls.Add(lblTotal);
             panel1.Controls.Add(lblIVA);
             panel1.Controls.Add(lblSubTotal);
@@ -96,21 +96,22 @@
             panel1.Size = new Size(1001, 501);
             panel1.TabIndex = 1;
             // 
-            // ibtPago
+            // ibtnGenerarCotización
             // 
-            ibtPago.BackColor = Color.CornflowerBlue;
-            ibtPago.ForeColor = Color.White;
-            ibtPago.IconChar = FontAwesome.Sharp.IconChar.MoneyBillWave;
-            ibtPago.IconColor = Color.White;
-            ibtPago.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ibtPago.IconSize = 25;
-            ibtPago.Location = new Point(746, 564);
-            ibtPago.Name = "ibtPago";
-            ibtPago.Size = new Size(111, 45);
-            ibtPago.TabIndex = 7;
-            ibtPago.Text = "Generar Cotización";
-            ibtPago.TextImageRelation = TextImageRelation.ImageBeforeText;
-            ibtPago.UseVisualStyleBackColor = false;
+            ibtnGenerarCotización.BackColor = Color.CornflowerBlue;
+            ibtnGenerarCotización.ForeColor = Color.White;
+            ibtnGenerarCotización.IconChar = FontAwesome.Sharp.IconChar.MoneyBillWave;
+            ibtnGenerarCotización.IconColor = Color.White;
+            ibtnGenerarCotización.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ibtnGenerarCotización.IconSize = 25;
+            ibtnGenerarCotización.Location = new Point(746, 564);
+            ibtnGenerarCotización.Name = "ibtnGenerarCotización";
+            ibtnGenerarCotización.Size = new Size(111, 45);
+            ibtnGenerarCotización.TabIndex = 7;
+            ibtnGenerarCotización.Text = "Generar Cotización";
+            ibtnGenerarCotización.TextImageRelation = TextImageRelation.ImageBeforeText;
+            ibtnGenerarCotización.UseVisualStyleBackColor = false;
+            ibtnGenerarCotización.Click += ibtnGenerarCotización_Click;
             // 
             // lblTotal
             // 
@@ -540,7 +541,7 @@
         #endregion
 
         private Panel panel1;
-        private FontAwesome.Sharp.IconButton ibtPago;
+        private FontAwesome.Sharp.IconButton ibtnGenerarCotización;
         private Label lblTotal;
         private Label lblIVA;
         private Label lblSubTotal;

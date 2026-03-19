@@ -19,13 +19,16 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
         private readonly decimal _totalFactura;
         private readonly List<DetalleDocumentoTempDto> _detallesTemp;
         private readonly int _clienteId;
-        private readonly int _empresaId;
         private readonly int _usuarioId;
         private readonly ApiClient _apiClient;
 
         public decimal MontoPagado { get; private set; }
 
-        public FormPago(decimal totalFactura, List<DetalleDocumentoTempDto> detallesTemp, int clienteId, int empresaId, int usuarioId, ApiClient apiClient)
+        public FormPago(decimal totalFactura,
+                        List<DetalleDocumentoTempDto> detallesTemp,
+                        int clienteId,
+                        int usuarioId,
+                        ApiClient apiClient)
         {
             InitializeComponent();
             _formService.RegistroDenominación(btn10cor, 10, txtPago);
@@ -37,7 +40,6 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
             _totalFactura = totalFactura;
             _detallesTemp = detallesTemp;
             _clienteId = clienteId;
-            _empresaId = empresaId;
             _usuarioId = usuarioId;
             _apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
         }
@@ -56,7 +58,6 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
                     _totalFactura,
                     _detallesTemp,
                     _clienteId,
-                    _empresaId,
                     _usuarioId,
                     _apiClient
                 );
@@ -66,11 +67,11 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
                     MessageBox.Show($"Factura {result.NumeroDocumento} registrada. Estado: {result.Estado}, Total: {result.TotalFactura}",
                                     "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    var pdfService = new FacturaPdfService();
+                    var pdfService = new DocumentoPDFService();
                     string rutaArchivo = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
                                                       $"Factura_{result.NumeroDocumento}.pdf");
 
-                    pdfService.GenerarFacturaPdf(result, rutaArchivo);
+                    pdfService.GenerarDocumentoPdf(result, rutaArchivo);
 
                     var formDetalle = new FormDetallePago(_totalFactura, Convert.ToDecimal(txtPago.Text));
                     formDetalle.ShowDialog();

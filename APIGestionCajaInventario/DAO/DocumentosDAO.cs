@@ -15,12 +15,14 @@ namespace APIGestionCajaInventario.DAO
             _conexionDB = conexionDB;
         }
 
-        public async Task<DocumentoResponseDto> RegistrarDocumentoAsync(DocumentoRequestDto request)
+        public async Task<DocumentoResponseDto> RegistrarDocumentoAsync(DocumentoRequestDto request, int empresaId)
         {
             var detallesXml = new XElement("Detalles",
             request.Detalles.Select(d =>
                 new XElement("Detalle",
                     new XAttribute("ProductoID", d.ProductoID),
+                    new XAttribute("CodigoProducto", d.CodigoProducto),
+                    new XAttribute("NombreProducto", d.NombreProducto),
                     new XAttribute("Cantidad", d.Cantidad),
                     new XAttribute("PrecioUnitario", d.PrecioUnitario),
                     new XAttribute("Descuento", d.PorcentajeDescuento)
@@ -34,7 +36,7 @@ namespace APIGestionCajaInventario.DAO
                 CommandType = CommandType.StoredProcedure
             };
 
-            cmd.Parameters.AddWithValue("@EmpresaID", request.EmpresaID);
+            cmd.Parameters.AddWithValue("@EmpresaID", empresaId);
             cmd.Parameters.AddWithValue("@ClienteID", (object?)request.ClienteID ?? DBNull.Value);
             cmd.Parameters.AddWithValue("@ProveedorID", (object?)request.ProveedorID ?? DBNull.Value);
             cmd.Parameters.AddWithValue("@TurnoID", request.TurnoID);
@@ -61,6 +63,7 @@ namespace APIGestionCajaInventario.DAO
                 response.EmpresaNombre = reader["EmpresaNombre"].ToString() ?? string.Empty;
                 response.EmpresaRUC = reader["EmpresaRUC"].ToString() ?? string.Empty;
                 response.ClienteNombre = reader["ClienteNombre"].ToString() ?? string.Empty;
+                response.ClienteTelefono = reader["ClienteTelefono"].ToString() ?? string.Empty;
                 response.FechaDocumento = reader.GetDateTime(reader.GetOrdinal("FechaDocumento"));
             }
 
@@ -72,7 +75,8 @@ namespace APIGestionCajaInventario.DAO
                 {
                     response.Detalles.Add(new DetalleDocumentoDto
                     {
-                        ProductoID = reader.GetInt32(reader.GetOrdinal("ProductoID")),
+                        CodigoProducto = reader["CodigoProducto"].ToString() ?? "",
+                        NombreProducto = reader["NombreProducto"].ToString() ?? "",
                         Cantidad = reader.GetInt32(reader.GetOrdinal("Cantidad")),
                         PrecioUnitario = reader.GetDecimal(reader.GetOrdinal("PrecioUnitario")),
                         PorcentajeDescuento = reader.GetDecimal(reader.GetOrdinal("PorcentajeDescuento"))

@@ -11,9 +11,9 @@ namespace APIGestionCajaInventario.Services
             _dao = dao;
         }
 
-        public async Task<List<Dictionary<string, object>>> GetVentasPorAnio(int anio)
+        public async Task<List<Dictionary<string, object>>> GetVentasPorAnio(int anio, int empresaId)
         {
-            return await _dao.ObtenerVentasPorAnioAsync(anio);
+            return await _dao.ObtenerVentasPorAnioAsync(anio, empresaId);
         }
     }
 }

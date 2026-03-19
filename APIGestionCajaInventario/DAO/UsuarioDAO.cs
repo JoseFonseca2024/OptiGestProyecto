@@ -35,7 +35,10 @@ namespace APIGestionCajaInventario.DAO
                 {
                     UsuarioID = Convert.ToInt32(dr["UsuarioID"]),
                     NombreUsuario = dr["NombreUsuario"].ToString()!,
-                    Rol = dr["NombreRol"].ToString()!
+                    Rol = dr["NombreRol"].ToString()!,
+                    EmpresaID = dr["EmpresaID"] == DBNull.Value
+                     ? 0 //No hay empresa asociada (para casos de primeros registros)
+                    : Convert.ToInt32(dr["EmpresaID"])
                 };
             }
 

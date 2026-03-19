@@ -21,7 +21,8 @@ namespace APIGestionCajaInventario.Services
             {
                 new Claim(ClaimTypes.NameIdentifier, usuario.UsuarioID.ToString()),
                 new Claim(ClaimTypes.Name, usuario.NombreUsuario),
-                new Claim(ClaimTypes.Role, usuario.Rol)
+                new Claim(ClaimTypes.Role, usuario.Rol),
+                new Claim("EmpresaID", usuario.EmpresaID.ToString())
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));

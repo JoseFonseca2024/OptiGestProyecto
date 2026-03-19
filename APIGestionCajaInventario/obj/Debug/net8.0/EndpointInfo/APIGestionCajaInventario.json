@@ -1734,9 +1734,13 @@
       "DetalleDocumentoDto": {
         "type": "object",
         "properties": {
-          "productoID": {
-            "type": "integer",
-            "format": "int32"
+          "codigoProducto": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreProducto": {
+            "type": "string",
+            "nullable": true
           },
           "cantidad": {
             "type": "integer",
@@ -1786,10 +1790,6 @@
       "DocumentoRequestDto": {
         "type": "object",
         "properties": {
-          "empresaID": {
-            "type": "integer",
-            "format": "int32"
-          },
           "tipoDocumentoID": {
             "type": "integer",
             "format": "int32"
@@ -1862,6 +1862,10 @@
             "nullable": true
           },
           "clienteNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "clienteTelefono": {
             "type": "string",
             "nullable": true
           },

@@ -21,8 +21,8 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
     public partial class FormFacturación : Form
     {
         private readonly IClienteRepository _clienteRepository;
-        private readonly IProductoRepository _productoRepository;
         private readonly IAdminRepository _adminRepository;
+        private readonly IProductoRepository _productoRepository;
         private readonly IUserRepository _userRepository;
         private readonly LoginResponse _loginResponse;
 
@@ -33,7 +33,6 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
         private readonly List<DetalleDocumentoTempDto> _detallesTemp = new();
 
         private int _clienteId;
-        private int _empresaId;
         private int _usuarioId;
 
         private readonly ApiClient _apiClient;
@@ -83,14 +82,9 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
 
         private async void FormFacturación_Load(object sender, EventArgs e)
         {
-            var empresa = await _adminRepository.ObtenerEmpresaDelUsuarioAsync();
-            if (empresa != null)
-            {
-                txtRUC.Text = empresa.RUC;
-                _empresaId = empresa.EmpresaID;
-            }
+            _usuarioId = _loginResponse.UsuarioID;
 
-            _usuarioId = _loginResponse.UsuarioID; 
+            await formService.CargarRUCdeEmpresa(_adminRepository, txtRUC);
         }
 
 
@@ -105,13 +99,14 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
             }
 
             var formPago = new FormPago(
-                    Convert.ToDecimal(txtTotalaPagar.Text),
-                    _detallesTemp,
-                    _clienteId,
-                    _empresaId,
-                    _usuarioId, _apiClient
-                );
+                Convert.ToDecimal(txtTotalaPagar.Text),
+                _detallesTemp,
+                _clienteId,
+                _usuarioId,
+                _apiClient
+            );
             formPago.ShowDialog();
+            formService.LimpiarFormularioDocumento(txtNombreCliente, msktxtNumero, txtSubtotal, txtIVA, txtTotalaPagar, txtCodigoProducto, txtNombreProducto, txtPrecio, txtStock, txtDescuento, numCantidad, dgtvDetallesFactura, _detallesTemp, ref _clienteId);
         }
 
         private void ibtnAgregar_Click(object sender, EventArgs e)
@@ -125,6 +120,12 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
             if (numCantidad.Value <= 0)
             {
                 MessageBox.Show("Ingrese una cantidad valida para la facturación", "Cantidad Invalida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (_productoSeleccionado.ProductoID == 0)
+            {
+                MessageBox.Show("Debe seleccionar un producto primero.");
                 return;
             }
 

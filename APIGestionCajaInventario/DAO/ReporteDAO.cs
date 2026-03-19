@@ -12,15 +12,26 @@ namespace APIGestionCajaInventario.DAO
             _conexion = conexion;
         }
 
-        public async Task<List<Dictionary<string, object>>> ObtenerVentasPorAnioAsync(int anio)
+        public async Task<List<Dictionary<string, object>>> ObtenerVentasPorAnioAsync(int anio, int empresaId)
         {
             var lista = new List<Dictionary<string, object>>();
 
             using var cn = _conexion.GetConnection();
             using var cmd = new SqlCommand(
-                $@"SELECT * FROM {Vistas.VW_VENTASMOVIMIENTOS} WHERE YEAR(FechaMovimiento) = @Anio ORDER BY FechaMovimiento;", cn);
+                $@"SELECT MovimientoCajaID,
+       NombreConcepto,
+       TipodeMovimiento,
+       Monto,
+       FechaMovimiento,
+       EmpresaID
+FROM VW_VENTASMOVIMIENTOS
+WHERE YEAR(FechaMovimiento) = @Anio
+  AND EmpresaID = @EmpresaID
+ORDER BY FechaMovimiento;
+", cn);
 
             cmd.Parameters.AddWithValue("@Anio", anio);
+            cmd.Parameters.AddWithValue("@EmpresaID", empresaId);
 
             await cn.OpenAsync();
             using var dr = await cmd.ExecuteReaderAsync();
@@ -32,7 +43,8 @@ namespace APIGestionCajaInventario.DAO
                     ["NombreConcepto"] = dr["NombreConcepto"],
                     ["TipodeMovimiento"] = dr["TipodeMovimiento"],
                     ["Monto"] = dr["Monto"],
-                    ["FechaMovimiento"] = dr["FechaMovimiento"]
+                    ["FechaMovimiento"] = dr["FechaMovimiento"],
+                    ["EmpresaID"] = dr["EmpresaID"]
                 };
                 lista.Add(fila);
             }

@@ -7,6 +7,7 @@ namespace APIGestionCajaInventario.Models
         public int UsuarioID { get; set; }
         [Required, StringLength(50)]
         public string NombreUsuario { get; set; } = string.Empty;
+        public int EmpresaID;
         [Required, EmailAddress, StringLength(100)]
         public string Email { get; set; } = string.Empty;
         [Required]

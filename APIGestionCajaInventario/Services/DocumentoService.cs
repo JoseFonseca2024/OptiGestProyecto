@@ -16,10 +16,9 @@ namespace APIGestionCajaInventario.Services
             _conexionDB = conexionDB;
         }
 
-        public async Task<DocumentoResponseDto> RegistrarDocumentoAsync(DocumentoRequestDto request)
+        public async Task<DocumentoResponseDto> RegistrarDocumentoAsync(DocumentoRequestDto request, int empresaId)
         {
             // Validaciones básicas
-            if (request.EmpresaID <= 0) throw new ArgumentException("EmpresaID inválido");
             if (request.TipoDocumentoID <= 0) throw new ArgumentException("TipoDocumentoID inválido");
             if (request.TurnoID <= 0) throw new ArgumentException("TurnoID inválido");
             if (request.UsuarioID <= 0) throw new ArgumentException("UsuarioID inválido");
@@ -44,7 +43,7 @@ namespace APIGestionCajaInventario.Services
                 throw new InvalidOperationException("El turno no está activo, no se puede registrar el documento.");
 
             // Llamada al DAO
-            var response = await _documentosDAO.RegistrarDocumentoAsync(request);
+            var response = await _documentosDAO.RegistrarDocumentoAsync(request, empresaId);
 
             // Ajustes de estado según tipo de documento
             if (request.TipoDocumentoID == 1) response.Estado = "Pagada";

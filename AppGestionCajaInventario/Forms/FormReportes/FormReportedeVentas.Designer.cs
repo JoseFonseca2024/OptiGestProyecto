@@ -51,10 +51,10 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Anchor = AnchorStyles.None;
+            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Microsoft YaHei", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(698, 12);
+            lblTitulo.Location = new Point(682, 23);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(194, 26);
             lblTitulo.TabIndex = 1;
@@ -65,7 +65,7 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft YaHei", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(682, 347);
+            label1.Location = new Point(682, 386);
             label1.Name = "label1";
             label1.Size = new Size(44, 19);
             label1.TabIndex = 3;
@@ -76,7 +76,7 @@
             dateTimePicker1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             dateTimePicker1.CustomFormat = "yyyy";
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(732, 344);
+            dateTimePicker1.Location = new Point(732, 383);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.ShowUpDown = true;
             dateTimePicker1.Size = new Size(169, 23);
@@ -91,7 +91,7 @@
             ibtnGenerar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ibtnGenerar.IconSize = 25;
             ibtnGenerar.ImageAlign = ContentAlignment.MiddleLeft;
-            ibtnGenerar.Location = new Point(682, 373);
+            ibtnGenerar.Location = new Point(682, 412);
             ibtnGenerar.Name = "ibtnGenerar";
             ibtnGenerar.Size = new Size(219, 28);
             ibtnGenerar.TabIndex = 5;
@@ -108,7 +108,7 @@
             ibtnExportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ibtnExportar.IconSize = 25;
             ibtnExportar.ImageAlign = ContentAlignment.MiddleLeft;
-            ibtnExportar.Location = new Point(682, 407);
+            ibtnExportar.Location = new Point(682, 446);
             ibtnExportar.Name = "ibtnExportar";
             ibtnExportar.Size = new Size(219, 28);
             ibtnExportar.TabIndex = 5;
@@ -119,7 +119,7 @@
             // formsPlot1
             // 
             formsPlot1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            formsPlot1.Location = new Point(549, 38);
+            formsPlot1.Location = new Point(549, 77);
             formsPlot1.Margin = new Padding(4, 3, 4, 3);
             formsPlot1.Name = "formsPlot1";
             formsPlot1.Size = new Size(403, 297);

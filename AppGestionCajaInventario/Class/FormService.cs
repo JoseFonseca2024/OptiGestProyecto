@@ -13,6 +13,7 @@ using AppGestionCajaInventario.Models.Repository;
 using AppGestionCajaInventario.Models.Repository.Interfaces;
 using FontAwesome.Sharp;
 using Newtonsoft.Json.Linq;
+using SixLabors.Fonts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -324,6 +325,23 @@ namespace AppGestionCajaInventario.Class
             dgv.DataSource = usuarios ?? new List<UsuarioDto>();
         }
 
+        public bool ValidarEmpresa(bool _tieneEmpresa)
+        {
+            if (!_tieneEmpresa)
+            {
+                MessageBox.Show(
+                    "No posee una empresa en su registro.\n\n Por favor dirijase al apartado 'Empresas' para realizar el registro.",
+                    "Acceso restringido",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                return false;
+            }
+
+            return true;
+        }
+
         public void CargarComboBoxEstado(ComboBox cmbEstado)
         {
             cmbEstado.DataSource = new List<KeyValuePair<string, bool>>
@@ -577,6 +595,23 @@ namespace AppGestionCajaInventario.Class
             }
         }
 
+        public async Task CargarRUCdeEmpresa(IAdminRepository adminRepository, TextBox txtRUC)
+        {
+            try
+            {
+                var empresa = await adminRepository.ObtenerEmpresaDelUsuarioAsync();
+
+                if (empresa != null)
+                {
+                    txtRUC.Text = empresa.RUC;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar la empresa: {ex.Message}");
+            }
+        }
+
         public void RegistroDenominación(Button btn, int Denominación, TextBox txt)
         {
             btn.Click += (s, e) =>
@@ -601,18 +636,18 @@ namespace AppGestionCajaInventario.Class
         }
 
         public async Task<DocumentoResponseDto?> RegistrarFacturaAsync(
-                decimal totalFactura,
-                List<DetalleDocumentoTempDto> detallesTemp,
-                int clienteId,
-                int empresaId,
-                int usuarioId, ApiClient apiClient)
+            decimal totalFactura,
+            List<DetalleDocumentoTempDto> detallesTemp,
+            int clienteId,
+            int usuarioId,
+            ApiClient apiClient)
         {
             var turno = await apiClient.Turno.ObtenerTurnoActivoAsync();
-            if (turno == null) throw new Exception("No hay turno activo para este usuario");
+            if (turno == null)
+                throw new Exception("No hay turno activo para este usuario");
 
             var request = new DocumentoRequestDto
             {
-                EmpresaID = empresaId,
                 ClienteID = clienteId,
                 TurnoID = turno.TurnoID,
                 TasaIVA = 15,
@@ -629,6 +664,78 @@ namespace AppGestionCajaInventario.Class
             };
 
             return await apiClient.Documento.RegistrarDocumentoAsync(request);
+        }
+
+        public async Task<DocumentoResponseDto?> RegistrarCotizacionAsync(
+            ApiClient apiClient,
+            IEnumerable<DetalleDocumentoTempDto> detallesTemp,
+            int clienteId,
+            int usuarioId)
+        {
+            var turno = await apiClient.Turno.ObtenerTurnoActivoAsync();
+
+            if (turno == null)
+                throw new Exception("No hay turno activo.");
+
+            var request = new DocumentoRequestDto
+            {
+                ClienteID = clienteId,
+                TurnoID = turno.TurnoID,
+                TasaIVA = 15,
+                UsuarioID = usuarioId,
+                TipoDocumentoID = 3, // COTIZACIÓN
+                ConceptoID = 1,
+                Detalles = detallesTemp.Select(d => new DetalleDocumentoDto
+                {
+                    ProductoID = d.ProductoID,
+                    Cantidad = d.Cantidad,
+                    PrecioUnitario = d.PrecioUnitario,
+                    PorcentajeDescuento = d.PorcentajeDescuento
+                }).ToList()
+            };
+
+            return await apiClient.Documento.RegistrarDocumentoAsync(request);
+        }
+
+        public void LimpiarFormularioDocumento(
+    TextBox txtNombreCliente,
+    MaskedTextBox txtTelefono,
+    TextBox txtSubtotal,
+    TextBox txtIVA,
+    TextBox txtTotal,
+    TextBox txtCodigoProducto,
+    TextBox txtNombreProducto,
+    TextBox txtPrecio,
+    TextBox txtStock,
+    TextBox txtDescuento,
+    NumericUpDown numCantidad,
+    DataGridView dgv,
+    List<DetalleDocumentoTempDto> detalles,
+    ref int clienteId)
+        {
+            // Cliente
+            txtNombreCliente.Clear();
+            txtTelefono.Clear();
+            clienteId = 0;
+
+            // Detalles
+            detalles.Clear();
+
+            dgv.DataSource = null;
+            dgv.DataSource = detalles;
+
+            // Totales
+            txtSubtotal.Text = "0.00";
+            txtIVA.Text = "0.00";
+            txtTotal.Text = "0.00";
+
+            // Producto inputs
+            txtCodigoProducto.Clear();
+            txtNombreProducto.Clear();
+            txtPrecio.Clear();
+            txtStock.Clear();
+            txtDescuento.Clear();
+            numCantidad.Value = 1;
         }
     }
 }

@@ -612,6 +612,7 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
+            Load += MainForm_Load;
             mstPrincipal.ResumeLayout(false);
             mstPrincipal.PerformLayout();
             mstTitulo.ResumeLayout(false);

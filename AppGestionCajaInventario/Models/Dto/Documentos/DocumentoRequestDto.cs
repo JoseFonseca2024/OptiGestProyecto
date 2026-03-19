@@ -16,6 +16,6 @@ namespace AppGestionCajaInventario.Models.Dto.Documentos
         public int UsuarioID { get; set; }
         public int TipoDocumentoID { get; set; }
         public int ConceptoID { get; set; }
-        public List<DetalleDocumentoDto> Detalles { get; set; }
+        public List<DetalleDocumentoDto> Detalles { get; set; } = new List<DetalleDocumentoDto>();
     }
 }

@@ -25,7 +25,14 @@ namespace APIGestionCajaInventario.Controllers
         {
             try
             {
-                var result = await _documentoService.RegistrarDocumentoAsync(request);
+                var empresaIdClaim = User.FindFirst("EmpresaID")?.Value;
+
+                if (empresaIdClaim == null)
+                    return Unauthorized("EmpresaID no encontrado en el token.");
+
+                int empresaId = int.Parse(empresaIdClaim);
+
+                var result = await _documentoService.RegistrarDocumentoAsync(request, empresaId);
 
                 return Ok(new ApiResponse<DocumentoResponseDto>
                 {
