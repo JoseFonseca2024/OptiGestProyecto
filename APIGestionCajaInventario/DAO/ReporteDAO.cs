@@ -18,17 +18,12 @@ namespace APIGestionCajaInventario.DAO
 
             using var cn = _conexion.GetConnection();
             using var cmd = new SqlCommand(
-                $@"SELECT MovimientoCajaID,
-       NombreConcepto,
-       TipodeMovimiento,
-       Monto,
-       FechaMovimiento,
-       EmpresaID
-FROM VW_VENTASMOVIMIENTOS
-WHERE YEAR(FechaMovimiento) = @Anio
-  AND EmpresaID = @EmpresaID
-ORDER BY FechaMovimiento;
-", cn);
+                $@"SELECT *
+                FROM {Vistas.VW_VENTASMOVIMIENTOS}
+                WHERE YEAR(FechaMovimiento) = @Anio
+                  AND EmpresaID = @EmpresaID
+                ORDER BY FechaMovimiento;
+                ", cn);
 
             cmd.Parameters.AddWithValue("@Anio", anio);
             cmd.Parameters.AddWithValue("@EmpresaID", empresaId);

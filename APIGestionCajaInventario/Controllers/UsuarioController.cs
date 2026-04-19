@@ -28,7 +28,7 @@ namespace APIGestionCajaInventario.Controllers
             return int.TryParse(claim, out usuarioId);
         }
 
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "Administrador,Cajero")]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

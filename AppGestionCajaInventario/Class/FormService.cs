@@ -635,7 +635,7 @@ namespace AppGestionCajaInventario.Class
             txtTotal.Text = total.ToString("N2");
         }
 
-        public async Task<DocumentoResponseDto?> RegistrarFacturaAsync(
+        public async Task<DocumentoResponseDto?> RegistrarFacturaContadoAsync(
             decimal totalFactura,
             List<DetalleDocumentoTempDto> detallesTemp,
             int clienteId,
@@ -695,6 +695,35 @@ namespace AppGestionCajaInventario.Class
             };
 
             return await apiClient.Documento.RegistrarDocumentoAsync(request);
+        }
+
+        public string ObtenerRutaDocumento(string numeroDocumento, TipoDocumento tipoDocumento)
+        {
+            string documentosPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            string carpetaBase = Path.Combine(documentosPath, "DocumentosEmitidos");
+
+            // Crear carpeta base si no existe
+            if (!Directory.Exists(carpetaBase))
+                Directory.CreateDirectory(carpetaBase);
+
+            string nombreCarpeta = tipoDocumento switch
+            {
+                TipoDocumento.Factura => "Facturas",
+                TipoDocumento.Compra => "Compras",
+                TipoDocumento.Cotizacion => "Cotizaciones",
+                _ => "Otros"
+            };
+
+            string carpetaFinal = Path.Combine(carpetaBase, nombreCarpeta);
+
+            // Crear subcarpeta si no existe
+            if (!Directory.Exists(carpetaFinal))
+                Directory.CreateDirectory(carpetaFinal);
+
+            string nombreArchivo = $"{nombreCarpeta}_{numeroDocumento}.pdf";
+
+            return Path.Combine(carpetaFinal, nombreArchivo);
         }
 
         public void LimpiarFormularioDocumento(

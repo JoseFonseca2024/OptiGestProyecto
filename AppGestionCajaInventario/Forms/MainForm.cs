@@ -1,6 +1,7 @@
 ﻿using AppGestionCajaInventario.Class;
 using AppGestionCajaInventario.Controllers;
 using AppGestionCajaInventario.Forms.FormCotización;
+using AppGestionCajaInventario.Forms.FormDocumentos;
 using AppGestionCajaInventario.Forms.FormFacturación;
 using AppGestionCajaInventario.Forms.FormProductos;
 using AppGestionCajaInventario.Forms.FormReportes;
@@ -92,7 +93,12 @@ namespace AppGestionCajaInventario
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!_formService.ValidarEmpresa(_empresaRegistrada)) return;
-            var form = new FormProductos(_productoRepository);
+
+            var form = new FormProductos(_productoRepository)
+            {
+                ModoSeleccion = false
+            };
+
             _formService.MostrarFormenPanel(form, panel1);
         }
 
@@ -128,20 +134,6 @@ namespace AppGestionCajaInventario
         {
             if (!_formService.ValidarEmpresa(_empresaRegistrada)) return;
             var form = new FormRegistroCajas(_cajasRepository);
-            _formService.MostrarFormenPanel(form, panel1);
-        }
-
-        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (!_formService.ValidarEmpresa(_empresaRegistrada)) return;
-            var form = new FormFacturación(
-                _adminRepository,
-                _clienteRepository,
-                _productoRepository,
-                _apiClient,
-                _userRepository,
-                LoginResponse
-            );
             _formService.MostrarFormenPanel(form, panel1);
         }
 
@@ -186,6 +178,26 @@ namespace AppGestionCajaInventario
             {
                 MessageBox.Show($"Error al verificar empresa: {ex.Message}");
             }
+        }
+
+        private void FacturaContadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!_formService.ValidarEmpresa(_empresaRegistrada)) return;
+            var form = new FormFacturaAlContado(
+                _adminRepository,
+                _clienteRepository,
+                _productoRepository,
+                _apiClient,
+                _userRepository,
+                LoginResponse
+            );
+            _formService.MostrarFormenPanel(form, panel1);
+        }
+
+        private void cotizacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormCotizacionesEmitidas(_clienteRepository);
+            _formService.MostrarFormenPanel(form, panel1);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace AppGestionCajaInventario.Forms.FormFacturación
 {
-    partial class FormFacturación
+    partial class FormFacturaAlContado
     {
         /// <summary>
         /// Required designer variable.
@@ -512,18 +512,18 @@
             lblTitulo.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTitulo.Location = new Point(20, 11);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(130, 28);
+            lblTitulo.Size = new Size(203, 28);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Facturación";
+            lblTitulo.Text = "Factura al Contado";
             // 
-            // FormFacturación
+            // FormFacturaAlContado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SteelBlue;
             ClientSize = new Size(1096, 538);
             Controls.Add(panel1);
-            Name = "FormFacturación";
+            Name = "FormFacturaAlContado";
             Text = "FormFacturación";
             Load += FormFacturación_Load;
             panel1.ResumeLayout(false);

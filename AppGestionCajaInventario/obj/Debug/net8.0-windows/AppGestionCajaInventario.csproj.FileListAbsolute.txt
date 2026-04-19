@@ -64,7 +64,6 @@ C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\Ap
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormTurnos.FormIniciarTurno.resources
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormTurnos.FormVerRegistroTurnos.resources
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormsCaja.FormRegistroCajas.resources
-C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormFacturación.FormFacturación.resources
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormReportes.FormReportedeVentas.resources
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\ScottPlot.dll
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\ScottPlot.WinForms.dll
@@ -80,3 +79,5 @@ C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\Ap
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormFacturación.FormPago.resources
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormFacturación.FormDetallePago.resources
 C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\bin\Debug\net8.0-windows\itextsharp.dll
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormFacturación.FormFacturaAlContado.resources
+C:\Users\Usuario\Documents\UNI\2025\IISemestre\BasedeDatosI\OptiGest_Proyecto\AppGestionCajaInventario\obj\Debug\net8.0-windows\AppGestionCajaInventario.Forms.FormDocumentos.FormCotizacionesEmitidas.resources

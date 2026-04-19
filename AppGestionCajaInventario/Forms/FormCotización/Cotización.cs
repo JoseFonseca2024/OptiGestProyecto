@@ -27,7 +27,6 @@ namespace AppGestionCajaInventario.Forms.FormCotización
         private readonly LoginResponse _loginResponse;
         private int _usuarioId;
         private int _clienteId;
-
         private readonly FormService formService = new FormService();
 
         private ProductosDto _productoSeleccionado = new ProductosDto();
@@ -47,21 +46,27 @@ namespace AppGestionCajaInventario.Forms.FormCotización
 
         private void ibtnBuscarCliente_Click(object sender, EventArgs e)
         {
-            var formCLientes = new FormClientes(_clienteRepository);
+            var formClientes = new FormClientes(_clienteRepository)
+            {
+                ModoSeleccion = true
+            };
 
-            formCLientes.ClienteSeleccionado += cliente =>
+            formClientes.ClienteSeleccionado += cliente =>
             {
                 txtNombreCliente.Text = cliente.NombreCliente;
                 msktxtNumero.Text = cliente.TelefonoCliente;
                 _clienteId = cliente.ClienteID;
             };
-
-            formCLientes.ShowDialog();
+            formClientes.Show();
         }
 
         private void ibtnBuscarProducto_Click(object sender, EventArgs e)
         {
-            var formProductos = new FormProductos.FormProductos(_productoRepository);
+            var formProductos = new FormProductos.FormProductos(_productoRepository)
+            {
+                ModoSeleccion = true
+            };
+
             formProductos.ProductoSeleccionado += producto =>
             {
                 _productoSeleccionado = producto;
@@ -70,6 +75,7 @@ namespace AppGestionCajaInventario.Forms.FormCotización
                 txtPrecio.Text = producto.PrecioUnitario.ToString();
                 txtStock.Text = producto.StockActual.ToString();
             };
+
             formProductos.ShowDialog();
         }
 
@@ -246,12 +252,12 @@ namespace AppGestionCajaInventario.Forms.FormCotización
                 {
                     var pdfService = new DocumentoPDFService();
 
-                    string ruta = Path.Combine(
-                        Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
-                        $"Cotizacion_{response.NumeroDocumento}.pdf"
+                    var rutaArchivo = formService.ObtenerRutaDocumento(
+                        response.NumeroDocumento,
+                        TipoDocumento.Cotizacion
                     );
 
-                    pdfService.GenerarDocumentoPdf(response, ruta);
+                    pdfService.GenerarDocumentoPdf(response, rutaArchivo);
 
                     MessageBox.Show("Cotización generada correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     formService.LimpiarFormularioDocumento(txtNombreCliente, msktxtNumero, txtSubtotal, txtIVA, txtTotalaPagar, txtCodigoProducto, txtNombreProducto, txtPrecio, txtStock, txtDescuento, numCantidad, dgtvDetallesFactura, _detallesTemp, ref _clienteId);

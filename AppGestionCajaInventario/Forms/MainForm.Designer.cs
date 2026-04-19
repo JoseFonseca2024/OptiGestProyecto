@@ -41,6 +41,8 @@
             cerrarTurnoToolStripMenuItem = new ToolStripMenuItem();
             imiFacturar = new FontAwesome.Sharp.IconMenuItem();
             facturaToolStripMenuItem = new ToolStripMenuItem();
+            FacturaContadoToolStripMenuItem = new ToolStripMenuItem();
+            creditoToolStripMenuItem = new ToolStripMenuItem();
             reciboDeCajaToolStripMenuItem = new ToolStripMenuItem();
             imiComprar = new FontAwesome.Sharp.IconMenuItem();
             imiCotizar = new FontAwesome.Sharp.IconMenuItem();
@@ -101,7 +103,7 @@
             panel1.Location = new Point(0, 146);
             panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1311, 555);
+            panel1.Size = new Size(1284, 555);
             panel1.TabIndex = 7;
             // 
             // mstPrincipal
@@ -110,7 +112,7 @@
             mstPrincipal.Location = new Point(0, 73);
             mstPrincipal.Name = "mstPrincipal";
             mstPrincipal.Padding = new Padding(7, 2, 0, 2);
-            mstPrincipal.Size = new Size(1311, 73);
+            mstPrincipal.Size = new Size(1284, 73);
             mstPrincipal.TabIndex = 5;
             mstPrincipal.Text = "menuStrip1";
             // 
@@ -202,10 +204,23 @@
             // 
             // facturaToolStripMenuItem
             // 
+            facturaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { FacturaContadoToolStripMenuItem, creditoToolStripMenuItem });
             facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
             facturaToolStripMenuItem.Size = new Size(152, 22);
             facturaToolStripMenuItem.Text = "Factura";
-            facturaToolStripMenuItem.Click += facturaToolStripMenuItem_Click;
+            // 
+            // FacturaContadoToolStripMenuItem
+            // 
+            FacturaContadoToolStripMenuItem.Name = "FacturaContadoToolStripMenuItem";
+            FacturaContadoToolStripMenuItem.Size = new Size(120, 22);
+            FacturaContadoToolStripMenuItem.Text = "Contado";
+            FacturaContadoToolStripMenuItem.Click += FacturaContadoToolStripMenuItem_Click;
+            // 
+            // creditoToolStripMenuItem
+            // 
+            creditoToolStripMenuItem.Name = "creditoToolStripMenuItem";
+            creditoToolStripMenuItem.Size = new Size(120, 22);
+            creditoToolStripMenuItem.Text = "Credito";
             // 
             // reciboDeCajaToolStripMenuItem
             // 
@@ -378,38 +393,39 @@
             // facturasToolStripMenuItem
             // 
             facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            facturasToolStripMenuItem.Size = new Size(141, 22);
+            facturasToolStripMenuItem.Size = new Size(180, 22);
             facturasToolStripMenuItem.Text = "Facturas";
             // 
             // comprasToolStripMenuItem
             // 
             comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            comprasToolStripMenuItem.Size = new Size(141, 22);
+            comprasToolStripMenuItem.Size = new Size(180, 22);
             comprasToolStripMenuItem.Text = "Compras";
             // 
             // cotizacionesToolStripMenuItem
             // 
             cotizacionesToolStripMenuItem.Name = "cotizacionesToolStripMenuItem";
-            cotizacionesToolStripMenuItem.Size = new Size(141, 22);
+            cotizacionesToolStripMenuItem.Size = new Size(180, 22);
             cotizacionesToolStripMenuItem.Text = "Cotizaciones";
+            cotizacionesToolStripMenuItem.Click += cotizacionesToolStripMenuItem_Click;
             // 
             // notasDeCreditoToolStripMenuItem1
             // 
             notasDeCreditoToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { notasDeCreditoToolStripMenuItem2, notasDeDebitoToolStripMenuItem1 });
             notasDeCreditoToolStripMenuItem1.Name = "notasDeCreditoToolStripMenuItem1";
-            notasDeCreditoToolStripMenuItem1.Size = new Size(141, 22);
+            notasDeCreditoToolStripMenuItem1.Size = new Size(180, 22);
             notasDeCreditoToolStripMenuItem1.Text = "Ajustes";
             // 
             // notasDeCreditoToolStripMenuItem2
             // 
             notasDeCreditoToolStripMenuItem2.Name = "notasDeCreditoToolStripMenuItem2";
-            notasDeCreditoToolStripMenuItem2.Size = new Size(163, 22);
+            notasDeCreditoToolStripMenuItem2.Size = new Size(180, 22);
             notasDeCreditoToolStripMenuItem2.Text = "Notas de Credito";
             // 
             // notasDeDebitoToolStripMenuItem1
             // 
             notasDeDebitoToolStripMenuItem1.Name = "notasDeDebitoToolStripMenuItem1";
-            notasDeDebitoToolStripMenuItem1.Size = new Size(163, 22);
+            notasDeDebitoToolStripMenuItem1.Size = new Size(180, 22);
             notasDeDebitoToolStripMenuItem1.Text = "Notas de Debito";
             // 
             // verMovimientosToolStripMenuItem2
@@ -500,7 +516,7 @@
             mstTitulo.Location = new Point(0, 0);
             mstTitulo.Name = "mstTitulo";
             mstTitulo.RightToLeft = RightToLeft.Yes;
-            mstTitulo.Size = new Size(1311, 73);
+            mstTitulo.Size = new Size(1284, 73);
             mstTitulo.TabIndex = 3;
             mstTitulo.Text = "menuStrip2";
             // 
@@ -604,7 +620,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1311, 701);
+            ClientSize = new Size(1284, 701);
             Controls.Add(lblFechayHora);
             Controls.Add(panel1);
             Controls.Add(mstPrincipal);
@@ -685,5 +701,7 @@
         private ToolStripMenuItem generarReporteDeProductosToolStripMenuItem;
         private ToolStripMenuItem sobreMovimientosToolStripMenuItem;
         private ToolStripMenuItem sobreSticokToolStripMenuItem;
+        private ToolStripMenuItem FacturaContadoToolStripMenuItem;
+        private ToolStripMenuItem creditoToolStripMenuItem;
     }
 }

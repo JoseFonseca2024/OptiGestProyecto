@@ -39,14 +39,14 @@ namespace AppGestionCajaInventario.Forms.FormTurnos
             txtNombreUsuario = new TextBox();
             comboBox1 = new ComboBox();
             groupBox2 = new GroupBox();
+            btnAplicar = new Button();
+            comboBox2 = new ComboBox();
             groupBox3 = new GroupBox();
+            rdbGeneral = new RadioButton();
+            rdbCerrado = new RadioButton();
+            rdbActivo = new RadioButton();
             dataGridView1 = new DataGridView();
             label1 = new Label();
-            comboBox2 = new ComboBox();
-            btnAplicar = new Button();
-            rdbActivo = new RadioButton();
-            rdbCerrado = new RadioButton();
-            rdbGeneral = new RadioButton();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -159,6 +159,25 @@ namespace AppGestionCajaInventario.Forms.FormTurnos
             groupBox2.TabStop = false;
             groupBox2.Text = "Ordenar por:";
             // 
+            // btnAplicar
+            // 
+            btnAplicar.Location = new Point(171, 20);
+            btnAplicar.Name = "btnAplicar";
+            btnAplicar.Size = new Size(103, 22);
+            btnAplicar.TabIndex = 29;
+            btnAplicar.Text = "Aplicar Orden";
+            btnAplicar.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Mas reciente", "Mas antiguo", "Mayor Monto Incial", "Menor Monto Inicial", "Mayor Monto Final", "Menor Monto Final", "Ninguno" });
+            comboBox2.Location = new Point(7, 20);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(154, 23);
+            comboBox2.TabIndex = 28;
+            // 
             // groupBox3
             // 
             groupBox3.Anchor = AnchorStyles.None;
@@ -174,47 +193,6 @@ namespace AppGestionCajaInventario.Forms.FormTurnos
             groupBox3.TabIndex = 26;
             groupBox3.TabStop = false;
             groupBox3.Text = "Estado:";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(22, 190);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(889, 277);
-            dataGridView1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.BackColor = Color.WhiteSmoke;
-            label1.Font = new Font("League Spartan Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(396, 9);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(167, 23);
-            label1.TabIndex = 27;
-            label1.Text = "HISTORIAL DE TURNOS";
-            // 
-            // comboBox2
-            // 
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Mas reciente", "Mas antiguo", "Mayor Monto Incial", "Menor Monto Inicial", "Mayor Monto Final", "Menor Monto Final", "Ninguno" });
-            comboBox2.Location = new Point(7, 20);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(154, 23);
-            comboBox2.TabIndex = 28;
-            // 
-            // btnAplicar
-            // 
-            btnAplicar.Location = new Point(171, 20);
-            btnAplicar.Name = "btnAplicar";
-            btnAplicar.Size = new Size(103, 22);
-            btnAplicar.TabIndex = 29;
-            btnAplicar.Text = "Aplicar Orden";
-            btnAplicar.UseVisualStyleBackColor = true;
             // 
             // rdbGeneral
             // 
@@ -248,6 +226,28 @@ namespace AppGestionCajaInventario.Forms.FormTurnos
             rdbActivo.TabStop = true;
             rdbActivo.Text = "Activo";
             rdbActivo.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(22, 190);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(889, 277);
+            dataGridView1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.BackColor = Color.WhiteSmoke;
+            label1.Font = new Font("League Spartan Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(396, 9);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(167, 23);
+            label1.TabIndex = 27;
+            label1.Text = "HISTORIAL DE TURNOS";
             // 
             // FormVerRegistroTurnos
             // 

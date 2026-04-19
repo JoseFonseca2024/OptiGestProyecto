@@ -18,7 +18,7 @@ using System.Windows.Forms;
 
 namespace AppGestionCajaInventario.Forms.FormFacturación
 {
-    public partial class FormFacturación : Form
+    public partial class FormFacturaAlContado : Form
     {
         private readonly IClienteRepository _clienteRepository;
         private readonly IAdminRepository _adminRepository;
@@ -38,7 +38,7 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
         private readonly ApiClient _apiClient;
 
 
-        public FormFacturación(IAdminRepository adminRepository,
+        public FormFacturaAlContado(IAdminRepository adminRepository,
                        IClienteRepository clienteRepository,
                        IProductoRepository productoRepository,
                        ApiClient apiClient,
@@ -56,7 +56,11 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
 
         private void ibtnBuscarCliente_Click(object sender, EventArgs e)
         {
-            var formClientes = new FormClientes(_clienteRepository);
+            var formClientes = new FormClientes(_clienteRepository)
+            {
+                ModoSeleccion = true
+            };
+
             formClientes.ClienteSeleccionado += cliente =>
             {
                 txtNombreCliente.Text = cliente.NombreCliente;
@@ -68,7 +72,11 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
 
         private void ibtnBuscarProducto_Click(object sender, EventArgs e)
         {
-            var formProductos = new FormProductos.FormProductos(_productoRepository);
+            var formProductos = new FormProductos.FormProductos(_productoRepository)
+            {
+                ModoSeleccion = true
+            };
+
             formProductos.ProductoSeleccionado += producto =>
             {
                 _productoSeleccionado = producto;
@@ -77,7 +85,8 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
                 txtPrecio.Text = producto.PrecioUnitario.ToString();
                 txtStock.Text = producto.StockActual.ToString();
             };
-            formProductos.Show();
+
+            formProductos.ShowDialog(); 
         }
 
         private async void FormFacturación_Load(object sender, EventArgs e)

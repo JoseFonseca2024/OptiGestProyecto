@@ -22,6 +22,8 @@ namespace AppGestionCajaInventario.Forms.FormProductos
         //Evento para forms alternos
         public event Action<ProductosDto>? ProductoSeleccionado;
 
+        public bool ModoSeleccion = false;
+
         public FormProductos(IProductoRepository productoRepository)
         {
             InitializeComponent();
@@ -144,7 +146,11 @@ namespace AppGestionCajaInventario.Forms.FormProductos
             {
                 var producto = (ProductosDto)dgvProductos.Rows[e.RowIndex].DataBoundItem;
                 ProductoSeleccionado?.Invoke(producto);
-                this.Close(); // cerrar el form después de seleccionar
+
+                if (ModoSeleccion)
+                {
+                    this.Close(); // solo se cierra si es selector
+                }
             }
         }
     }

@@ -247,7 +247,7 @@
             // 
             lblDetalle.AutoSize = true;
             lblDetalle.Font = new Font("League Spartan Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDetalle.Location = new Point(80, 9);
+            lblDetalle.Location = new Point(80, 13);
             lblDetalle.Margin = new Padding(4, 0, 4, 0);
             lblDetalle.Name = "lblDetalle";
             lblDetalle.Size = new Size(172, 23);

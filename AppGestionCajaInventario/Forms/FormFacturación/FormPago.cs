@@ -54,7 +54,7 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
 
             try
             {
-                var result = await _formService.RegistrarFacturaAsync(
+                var result = await _formService.RegistrarFacturaContadoAsync(
                     _totalFactura,
                     _detallesTemp,
                     _clienteId,
@@ -68,9 +68,7 @@ namespace AppGestionCajaInventario.Forms.FormFacturación
                                     "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     var pdfService = new DocumentoPDFService();
-                    string rutaArchivo = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                                                      $"Factura_{result.NumeroDocumento}.pdf");
-
+                    string rutaArchivo = _formService.ObtenerRutaDocumento(result.NumeroDocumento, TipoDocumento.Factura);
                     pdfService.GenerarDocumentoPdf(result, rutaArchivo);
 
                     var formDetalle = new FormDetallePago(_totalFactura, Convert.ToDecimal(txtPago.Text));

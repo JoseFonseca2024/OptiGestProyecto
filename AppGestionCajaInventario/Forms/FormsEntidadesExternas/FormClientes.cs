@@ -20,6 +20,7 @@ namespace AppGestionCajaInventario.Forms.FormsEntidadesExternas
 
         //Evento para forms alternos
         public event Action<ClienteDto>? ClienteSeleccionado;
+        public bool ModoSeleccion = false;
 
         public FormClientes(IClienteRepository clienteRepository)
         {
@@ -125,7 +126,10 @@ namespace AppGestionCajaInventario.Forms.FormsEntidadesExternas
             {
                 var cliente = (ClienteDto)dgvCliente.Rows[e.RowIndex].DataBoundItem;
                 ClienteSeleccionado?.Invoke(cliente);
-                this.Close(); // cerrar el form después de seleccionar
+                if (ModoSeleccion)
+                {
+                    this.Close(); // cerrar el form después de seleccionar
+                }
             }
         }
     }
